@@ -5,14 +5,46 @@
 
 <style>
 body {
-	background-image: url("eclipse.jpg");
+	background: url("eclipse.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 } 
+
+.text {
+    text-align: center;
+    color: white;
+    font-size: 800%;
+    font-family: customFont
+}
+
+#footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 500%;
+}
+
+@font-face {
+  font-family: customFont;
+  src: url(customFont.ttf);
+}
 
 </style>
 
 </head>
 
 <body>
+
+    <div>
+        <header class="text">Cosmic Conquest</header>
+    </div>
+    <div>
+        <footer class="text" id="footer">Currently In Development By Zachary Marvin</footer>
+    </div>
 
 </body>
 </html>
