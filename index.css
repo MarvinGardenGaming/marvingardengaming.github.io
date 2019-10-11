@@ -15,12 +15,14 @@ body {
 
 .chart-container {
     position: relative;
-    height: 40vh;
-    width: 80vw;
+    height: 75%;
+    width: 75%;
+    padding-left: 12.5%;
+    background-color: gray;;
 }
 
 #enterName {
-    position: absolute;
+    width: auto;
 }
 
 #footer {
