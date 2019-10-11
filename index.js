@@ -3,7 +3,7 @@ window.onload = function() {
     $.get("testNames.txt", function(data){
         for(item in data){
             console.log("item is:");
-            console.log(data[item]);
+            console.log(typeof(data[item]));
         }
         console.log(data.toString());
     });
