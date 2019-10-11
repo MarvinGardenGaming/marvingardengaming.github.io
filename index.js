@@ -7,9 +7,10 @@ window.onload = function() {
     
     $.get("testNames.txt", function(data){
         var rows = data.split("\n");
-        console.log("rows are: " + rows);
+        console.log("rows are: ");
+        console.log(rows);
         for(row in rows){
-            var columnsInRow = row.split(",");
+            var columnsInRow = rows[row].split(",");
             var name = columnsInRow[0];
             var gender = columnsInRow[1];
             var count = columnsInRow[2];
