@@ -19,6 +19,7 @@ body {
 }
 
 #chart-form-control {
+    padding-top: 10%;
     padding-left: 45%;
     padding-right: 45%;
 }
