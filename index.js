@@ -1,10 +1,25 @@
 window.onload = function() {
+
+    var nameArray = [];
+    var genderArray = [];
+    var countArray = [];
+    var yearArray = [];
     
     $.get("testNames.txt", function(data){
-        for(item in data){
-            console.log("item is:");
-            console.log(typeof(data[item]));
+        var rows = data.split("\n");
+        for(row in rows){
+            var columnsInRow = row.split(",");
+            var name = columnsInRow[0];
+            var gender = columnsInRow[1];
+            var count = columnsInRow[2];
+            var year = columnsInRow[3];
+
+            nameArray.push(name);
+            genderArray.push(gender);
+            countArray.push(count);
+            yearArray.push(year);
         }
+
         console.log(data.toString());
     });
 
@@ -15,12 +30,12 @@ window.onload = function() {
 
         // The data for our dataset
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: nameArray,
             datasets: [{
                 label: 'My First dataset',
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45]
+                data: countArray
             }]
         },
 
