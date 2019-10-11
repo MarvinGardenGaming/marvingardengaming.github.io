@@ -20,8 +20,6 @@ body {
 
 #myChart {
     position: relative;
-    height: 75%;
-    width: 75% !important;
     background-color: gray;;
 }
 
