@@ -23,10 +23,15 @@ window.onload = function() {
         console.log(data.toString());
     });
 
+    console.log("Names are");
+    console.log(nameArray);
+    console.log("Counts are");
+    console.log(countArray);
+
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
-        type: 'line',
+        type: 'bar',
 
         // The data for our dataset
         data: {
