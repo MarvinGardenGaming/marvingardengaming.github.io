@@ -51,8 +51,8 @@ window.onload = function() {
     });
 };
 
-function searchName(){
+function makeSearch(){
     console.log("function began");
     nameToSearch = document.getElementById("enterName").value;
     console.log(nameToSearch);
-}
+};
