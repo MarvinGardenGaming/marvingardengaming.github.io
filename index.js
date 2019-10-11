@@ -1,6 +1,10 @@
 window.onload = function() {
     
     $.get("testNames.txt", function(data){
+        for(item in data){
+            console.log("item is:");
+            console.log(item);
+        }
         console.log(data.toString());
     });
 
