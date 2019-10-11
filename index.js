@@ -1,9 +1,6 @@
 window.onload = function() {
-    const fs = require('fs');
-
-    fs.readFile('testNames.txt', (err, data) => {
-        if (err) throw err;
-
+    
+    $.get("testNames.txt", function(data){
         console.log(data.toString());
     });
 
