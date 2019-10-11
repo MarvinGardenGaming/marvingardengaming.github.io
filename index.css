@@ -18,13 +18,14 @@ body {
     padding-right: 15%;
 }
 
-#myChart {
-    position: relative;
-    background-color: lightgray;
+.chart-form-control {
+    padding-left: 45%;
+    padding-right: 45%;
 }
 
-#enterName {
-    width: auto;
+#myChart {
+    position: relative;
+    background-color: rgba(236, 236, 236, 0.5);
 }
 
 #footer {
