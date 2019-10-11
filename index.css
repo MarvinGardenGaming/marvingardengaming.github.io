@@ -14,13 +14,14 @@ body {
 }
 
 .chart-container {
-    padding-left: 12.5%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 #myChart {
     position: relative;
     height: 75%;
-    width: 75%;
+    width: 75% !important;
     background-color: gray;;
 }
 
