@@ -1,0 +1,28 @@
+body {
+	background: url("eclipse.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} 
+
+.text {
+    text-align: center;
+    color: white;
+    font-size: 8vw;
+    font-family: customFont
+}
+
+#footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 5vw;
+}
+
+@font-face {
+  font-family: customFont;
+  src: url(customFont.ttf);
+}
