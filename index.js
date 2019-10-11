@@ -7,6 +7,7 @@ window.onload = function() {
     
     $.get("testNames.txt", function(data){
         var rows = data.split("\n");
+        console.log("rows are: " + rows);
         for(row in rows){
             var columnsInRow = row.split(",");
             var name = columnsInRow[0];
