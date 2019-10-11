@@ -4,6 +4,8 @@ window.onload = function() {
     var genderArray = [];
     var countArray = [];
     var yearArray = [];
+
+    console.log(document.getElementById("enterName").value)
     
     $.get("testNames.txt", function(data){
         var rows = data.split("\n");
