@@ -5,8 +5,6 @@ window.onload = function() {
     var countArray = [];
     var yearArray = [];
 
-    console.log(document.getElementById("enterName").value)
-    
     $.get("testNames.txt", function(data){
         var rows = data.split("\n");
         console.log("rows are: ");
@@ -52,3 +50,9 @@ window.onload = function() {
         });
     });
 };
+
+function searchName(){
+    console.log("function began");
+    nameToSearch = document.getElementById("enterName").value;
+    console.log(nameToSearch);
+}
