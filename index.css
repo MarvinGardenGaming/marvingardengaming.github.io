@@ -13,6 +13,12 @@ body {
     font-family: customFont
 }
 
+.chart-container {
+    position: relative;
+    height: 40vh;
+    width: 80vw;
+}
+
 #footer {
     position: fixed;
     right: 0;
