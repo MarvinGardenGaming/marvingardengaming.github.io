@@ -13,11 +13,14 @@ body {
     font-family: customFont
 }
 
+.chart-container {
+    padding-left: 12.5%;
+}
+
 #myChart {
     position: relative;
     height: 75%;
     width: 75%;
-    padding-left: 12.5%;
     background-color: gray;;
 }
 
