@@ -94,5 +94,7 @@ function makeSearch(){
             // Configuration options go here
             options: {}
         });
+
+        chart.update();
     });
 };
