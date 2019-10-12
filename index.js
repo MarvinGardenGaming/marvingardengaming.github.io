@@ -66,7 +66,7 @@ function makeSearch(){
             var count = columnsInRow[2];
             var year = columnsInRow[3];
 
-            if(name == nameToSearch){
+            if(name == nameToSearch && year == "2000"){
                 console.log("match found")
                 nameArray.push(name);
                 genderArray.push(gender);
