@@ -47,8 +47,15 @@ body {
 }
 
 #enterName {
-    width: 75%;
+    width: 200px;
     display: inline-block;
+    vertical-align: middle;
+}
+
+#enterYear {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 #footer {

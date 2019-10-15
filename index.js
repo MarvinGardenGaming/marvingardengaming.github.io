@@ -49,6 +49,7 @@ function makeSearch(){
     countArray = [];
     yearArray = [];
     nameToSearch = document.getElementById("enterName").value;
+    yearToSearch = document.getElementById("enterYear").value;
     $.get("masterList.txt", function(data){
         var rows = data.split("\n");
         for(row in rows){
