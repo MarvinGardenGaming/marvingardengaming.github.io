@@ -78,6 +78,8 @@ function makeSearch(){
         };
         if(chart){
             console.log("chart exists");
+            chart.config.data.labels = nameArray;
+            chart.config.data.datasets.data = countArray;
             chart.update();
         } else {
             console.log("chart doesnt exist");
