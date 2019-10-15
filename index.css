@@ -24,6 +24,10 @@ body {
     height: 100%;
 }
 
+.form-check-inline {
+    display: inline-block;
+}
+
 .text {
     text-align: center;
     color: white;
@@ -37,7 +41,8 @@ body {
 
 #chart-form-control {
     padding-top: 10px;
-    padding-left: 40%;
+    padding-left: auto;
+    padding-right: auto;
 }
 
 #myChart {
