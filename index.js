@@ -91,7 +91,7 @@ function makeSearch(){
     
                 // The data for our dataset
                 data: {
-                    labels: nameArray,
+                    labels: yearArray,
                     datasets: [{
                         label: 'My First dataset',
                         backgroundColor: 'rgb(255, 99, 132)',
