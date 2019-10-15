@@ -2,6 +2,8 @@ var nameArray = [];
 var genderArray = [];
 var countArray = [];
 var yearArray = [];
+var ctx = null;
+var chart = null;
 
 // window.onload = function() {
 
@@ -74,34 +76,30 @@ function makeSearch(){
                 yearArray.push(year);
             }
         };
-        console.log("window is: ");
-        console.log(window);
-        console.log("window.chart is: ");
-        console.log(widnow.chart);
-        if(window.chart){
-            chart.update();
-            console.log("Old chart updated");
-        }else{
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'bar',
-        
-                // The data for our dataset
-                data: {
-                    labels: nameArray,
-                    datasets: [{
-                        label: 'My First dataset',
-                        backgroundColor: 'rgb(255, 99, 132)',
-                        borderColor: 'rgb(255, 99, 132)',
-                        data: countArray
-                    }]
-                },
-        
-                // Configuration options go here
-                options: {}
-            });
-            console.log("no chart existed");
-        };
+    });
+
+    console.log(this);
+    console.log(window);
+    console.log(ctx);
+    console.log(chart);
+
+    ctx = document.getElementById('myChart').getContext('2d');
+    chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'bar',
+
+        // The data for our dataset
+        data: {
+            labels: nameArray,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: countArray
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
     });
 };
