@@ -76,6 +76,7 @@ function makeSearch(){
         };
         if(chart){
             chart.destroy();
+            console.log("Old chart destroyed");
         };
 
         var ctx = document.getElementById('myChart').getContext('2d');
