@@ -74,8 +74,8 @@ function makeSearch(){
                 yearArray.push(year);
             }
         };
-        if(chart){
-            chart.destroy();
+        if(this.chart){
+            this.chart.destroy();
             console.log("Old chart destroyed");
         };
 
