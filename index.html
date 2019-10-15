@@ -20,21 +20,9 @@
         <header class="text">Name Statistical Analysis</header>
     </div>
 
-    <div class="chart-container">
-        <canvas id="myChart"></canvas>
-    </div>
-
-    <div id="chart-form-control">
-        <form name="searchName">
-            <div class="form-group">
-                <input type="text" class="form-control" id="enterName" placeholder="ie. John">
-                <button type="button" class="btn btn-default" onclick="makeSearch()">Submit</button>
-            </div>
-        </form>
-    </div>
     <div>
         <ul class="nav nav-tabs nav-stacked">
-            <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+            <li class="active"><a href="#tab1" data-toggle="tab">Search A Name</a></li>
             <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
             <li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
         </ul>
@@ -42,7 +30,18 @@
 
         <div class="tab-content">
             <div class="tab-pane fade in active" id="tab1">
-                Tab 1 content
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            
+                <div id="chart-form-control">
+                    <form name="searchName">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="enterName" placeholder="ie. John">
+                            <button type="button" class="btn btn-default" onclick="makeSearch()">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="tab-pane fade" id="tab2">
                 Tab 2 content              
