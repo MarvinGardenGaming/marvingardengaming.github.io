@@ -54,9 +54,11 @@ var chart = null;
 // };
 
 function makeSearch(){
-    console.log("function began");
+    nameArray = [];
+    genderArray = [];
+    countArray = [];
+    yearArray = [];
     nameToSearch = document.getElementById("enterName").value;
-    console.log(nameToSearch);
     $.get("masterList.txt", function(data){
         var rows = data.split("\n");
         console.log("rows are: ");
@@ -77,11 +79,6 @@ function makeSearch(){
             }
         };
     });
-
-    console.log(this);
-    console.log(window);
-    console.log(ctx);
-    console.log(chart);
 
     if(chart){
         console.log("chart exists");
