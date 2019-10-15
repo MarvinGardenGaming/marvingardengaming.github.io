@@ -74,13 +74,11 @@ function makeSearch(){
                 yearArray.push(year);
             }
         };
-        console.log("this is: ");
-        console.log(this);
-        console.log("this.chart is: ");
-        console.log(this.chart);
-        console.log("chart is: ");
-        console.log(chart);
-        if(this.chart){
+        console.log("window is: ");
+        console.log(window);
+        console.log("window.chart is: ");
+        console.log(widnow.chart);
+        if(window.chart){
             chart.update();
             console.log("Old chart updated");
         }else{
