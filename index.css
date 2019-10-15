@@ -4,7 +4,15 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-} 
+}
+
+.nav .nav-tabs .nav-stacked{
+    display: inline-block;
+}
+
+.tab-content{
+    display: inline-block;
+}
 
 .text {
     text-align: center;
