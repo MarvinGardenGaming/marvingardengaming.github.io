@@ -54,6 +54,7 @@ var chart = null;
 // };
 
 function makeSearch(){
+    console.log("starting make search function and clearing data arrays");
     nameArray = [];
     genderArray = [];
     countArray = [];
