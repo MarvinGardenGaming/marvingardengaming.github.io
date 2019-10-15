@@ -73,7 +73,10 @@ function makeSearch(){
                 countArray.push(count);
                 yearArray.push(year);
             }
-        }
+        };
+        if(chart){
+            chart.destroy();
+        };
 
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
