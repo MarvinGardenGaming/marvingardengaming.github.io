@@ -31,8 +31,8 @@ window.onload = function() {
         console.log("Counts are");
         console.log(countArray);
     
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var chart = new Chart(ctx, {
+        ctx = document.getElementById('myChart').getContext('2d');
+        chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'bar',
     
