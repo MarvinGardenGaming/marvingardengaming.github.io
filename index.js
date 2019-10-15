@@ -41,6 +41,8 @@ window.onload = function() {
             options: {}
         });
     });
+
+    var slider = new Slider('#ex2', {});
 };
 
 function makeSearch(){
