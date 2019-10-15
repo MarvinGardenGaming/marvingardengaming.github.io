@@ -74,31 +74,36 @@ function makeSearch(){
                 yearArray.push(year);
             }
         };
+        console.log("this is: ");
+        console.log(this);
+        console.log("this.chart is: ");
+        console.log(this.chart);
+        console.log("chart is: ");
+        console.log(chart);
         if(this.chart){
-            this.chart.destroy();
-            console.log("Old chart destroyed");
+            chart.update();
+            console.log("Old chart updated");
+        }else{
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'bar',
+        
+                // The data for our dataset
+                data: {
+                    labels: nameArray,
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: countArray
+                    }]
+                },
+        
+                // Configuration options go here
+                options: {}
+            });
+            console.log("no chart existed");
         };
-
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'bar',
-    
-            // The data for our dataset
-            data: {
-                labels: nameArray,
-                datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
-                    data: countArray
-                }]
-            },
-    
-            // Configuration options go here
-            options: {}
-        });
-
-        chart.update();
     });
 };
