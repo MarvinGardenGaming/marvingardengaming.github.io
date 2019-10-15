@@ -61,8 +61,6 @@ function makeSearch(){
     nameToSearch = document.getElementById("enterName").value;
     $.get("masterList.txt", function(data){
         var rows = data.split("\n");
-        console.log("rows are: ");
-        console.log(rows);
         for(row in rows){
             var columnsInRow = rows[row].split(",");
             var name = columnsInRow[0];
@@ -78,31 +76,30 @@ function makeSearch(){
                 yearArray.push(year);
             }
         };
+        if(chart){
+            console.log("chart exists");
+            chart.update();
+        } else {
+            console.log("chart doesnt exist");
+            ctx = document.getElementById('myChart').getContext('2d');
+            chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'bar',
+    
+                // The data for our dataset
+                data: {
+                    labels: nameArray,
+                    datasets: [{
+                        label: 'My First dataset',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: countArray
+                    }]
+                },
+    
+                // Configuration options go here
+                options: {}
+            });
+        };
     });
-
-    if(chart){
-        console.log("chart exists");
-        chart.update();
-    } else {
-        console.log("chart doesnt exist");
-        ctx = document.getElementById('myChart').getContext('2d');
-        chart = new Chart(ctx, {
-            // The type of chart we want to create
-            type: 'bar',
-
-            // The data for our dataset
-            data: {
-                labels: nameArray,
-                datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
-                    data: countArray
-                }]
-            },
-
-            // Configuration options go here
-            options: {}
-        });
-    };
 };
