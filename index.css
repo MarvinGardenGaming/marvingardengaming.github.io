@@ -6,6 +6,11 @@ body {
     background-size: cover;
 }
 
+.tab-container {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 .nav-tabs {
     display: inline-block;
 }
@@ -24,8 +29,7 @@ body {
 }
 
 .chart-container {
-    padding-left: 15%;
-    padding-right: 15%;
+    
 }
 
 #chart-form-control {
