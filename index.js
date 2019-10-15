@@ -83,6 +83,12 @@ function makeSearch(){
     console.log(ctx);
     console.log(chart);
 
+    if(chart){
+        console.log("chart exists");
+    } else {
+        console.log("chart doesnt exist");
+    };
+
     ctx = document.getElementById('myChart').getContext('2d');
     chart = new Chart(ctx, {
         // The type of chart we want to create
