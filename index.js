@@ -24,7 +24,7 @@ window.onload = function() {
         var optionText = document.createTextNode(i);
         option.appendChild(optionText)
         yearDropdown.appendChild(option);
-        local .selectedIndex = "2019";
+        yearDropdown.selectedIndex = "2019";
     }
 
     $.get("testNames.txt", function(data){
