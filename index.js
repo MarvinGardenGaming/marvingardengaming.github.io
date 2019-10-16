@@ -85,6 +85,14 @@ window.onload = function() {
     });
 };
 
+function createDropdown(){
+    console.log("Code to create dropdown");
+};
+
+function createSlider(){
+    console.log("Code to create slider");
+};
+
 function makeSearch(){
     nameArray = [];
     genderArray = [];
