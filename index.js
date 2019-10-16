@@ -111,7 +111,7 @@ function makeSearch(){
     yearArray = [];
     boyCount = [];
     girlCount = [];
-    yearDictionary = {};
+    yearDictionary = [];
     nameToSearch = document.getElementById("enterName").value;
     beginningYearToSearch = document.getElementById("beginningYearDropdown").value;
     yearToSearch = document.getElementById("yearDropdown").value;
@@ -187,14 +187,16 @@ function makeSearch(){
                 var gender = columnsInRow[1];
                 var count = columnsInRow[2];
                 var year = columnsInRow[3];
-
+                
+                //Create a dictionary key value pair for each year with the default value an array of two 0 values
                 for (var i = beginningYearToSearch; i <= yearToSearch; i++){
                     yearDictionary.push({
                         key: i,
                         value: [0,0]
                     })
                 }
-    
+                
+                //If name is found within search range update the first value for female and second value for male
                 if(name == nameToSearch && year <= yearToSearch && year >= beginningYearDropdown){
                     if(gender == "F"){
                         var thisYear = yearDictionary[year].value;
