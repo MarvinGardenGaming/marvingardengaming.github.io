@@ -85,13 +85,12 @@ function makeSearch(){
             console.log("single year checked");
             var list = document.getElementById("dropdownMenuList"); 
             for (var i = 1880; i < 2019; i++){                
-                var li = document.createElement("li");
                 var link = document.createElement("a");             
-                var text = document.createTextNode(i);
-                link.appendChild(text);
+                link.class = "dropdown-item";
                 link.href = "#";
-                li.appendChild(link);
-                list.appendChild(li);
+                var linkText = document.createTextNode(i);
+                link.appendChild(linkText)
+                list.appendChild(link);
             }
             var chartData = {
                 labels: [yearToSearch],
