@@ -107,14 +107,16 @@ function makeSearch(){
                 labels: ["Girl", "Boy"],
                 datasets: [
                     {
-                        label: "Blue",
-                        backgroundColor: "blue",
-                        data: [countArray[1]]
+                        label: "Pink",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: "white",
+                        data: girlCount
                     },
                     {
-                        label: "Pink",
-                        backgroundColor: "pink",
-                        data: [countArray[0]]
+                        label: "Blue",
+                        backgroundColor: 'rgb(102, 156, 236)',
+                        borderColor: "white",
+                        data: boyCount
                     }
                 ]
             }
