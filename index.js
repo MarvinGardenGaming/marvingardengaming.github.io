@@ -87,10 +87,12 @@ window.onload = function() {
 
 function createDropdown(){
     console.log("Code to create dropdown");
+    document.getElementById("yearDropdown").style.display = "inline-block";
 };
 
 function createSlider(){
     console.log("Code to create slider");
+    document.getElementById("yearDropdown").style.display = "none";
 };
 
 function makeSearch(){
