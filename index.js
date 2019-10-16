@@ -111,7 +111,7 @@ function makeSearch(){
             }
             chart.config.data = chartData;
             chart.config.options.title.display = true;
-            chart.config.options.title.text = nameToSearch;
+            chart.config.options.title.text = "Showing results for the name \'" + nameToSearch + "\' in the year \'" + yearToSearch + "\'";
             chart.update();
             console.log(chart.config.data);
         } else if (yearRangeChecked){
