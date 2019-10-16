@@ -69,20 +69,20 @@ function makeSearch(){
         };
 
         console.log(chart.config.data);
-        var checkBox1 = document.getElementById("inlineRadio1").checked;
-        var checkBox2 = document.getElementById("inlineRadio2").checked;
-        console.log("check box 1 is: ");
-        console.log(checkBox1);
-        console.log("check box 2 is: ");
-        console.log(checkBox2);
-        if(document.getElementById("inlineRadio1").checked == "checked"){
+        var singleYearChecked = document.getElementById("inlineRadio1").checked;
+        var yearRangeChecked = document.getElementById("inlineRadio2").checked;
+        console.log("single year checked is: ");
+        console.log(singleYearChecked);
+        console.log("year range checked is: ");
+        console.log(yearRangeChecked);
+        if(singleYearChecked){
             console.log("single year checked");
             chart.config.data.labels = yearArray;
             chart.config.data.datasets[0].data = countArray;
             chart.config.data.datasets[0].label = nameToSearch;
             chart.update();
             console.log(chart.config.data);
-        } else if (document.getElementById("inlineRadio2").checked == "checked"){
+        } else if (yearRangeChecked){
             console.log("year range checked");
             var chartData = {
                 labels: ["Girl", "Boy"],
@@ -99,6 +99,10 @@ function makeSearch(){
                     }
                 ]
             }
+            chart.config.data = chartData;
+            chart.update();
+            console.log("chart updated");
+            console.log(chart.config.data);
         }
     });
 };
