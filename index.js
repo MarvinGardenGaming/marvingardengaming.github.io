@@ -87,13 +87,13 @@ function makeSearch(){
                 labels: [yearToSearch],
                 datasets: [
                     {
-                        label: "Pink",
+                        label: "Girl",
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: "white",
                         data: girlCount
                     },
                     {
-                        label: "Blue",
+                        label: "Boy",
                         backgroundColor: 'rgb(102, 156, 236)',
                         borderColor: "white",
                         data: boyCount
@@ -106,16 +106,16 @@ function makeSearch(){
         } else if (yearRangeChecked){
             console.log("year range checked");
             var chartData = {
-                labels: ["Girl", "Boy"],
+                labels: yearArray,
                 datasets: [
                     {
-                        label: "Pink",
+                        label: "Girl",
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: "white",
                         data: girlCount
                     },
                     {
-                        label: "Blue",
+                        label: "Boy",
                         backgroundColor: 'rgb(102, 156, 236)',
                         borderColor: "white",
                         data: boyCount
