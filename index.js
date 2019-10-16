@@ -115,12 +115,12 @@ function makeSearch(){
                 }
             }
         };
-        if(girlCount == []){
+        if(girlCount.length == 0){
             console.log("setting girl to 0");
             girlCount = ["0"];
         };
 
-        if(boyCount == []){
+        if(boyCount.length == 0){
             console.log("setting boy to 0");
             boyCount = ["0"];
         };
