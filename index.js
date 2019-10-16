@@ -72,5 +72,7 @@ function makeSearch(){
         chart.config.data.labels = yearArray;
         chart.config.data.datasets.data = countArray;
         chart.update();
+        console.log(chart.config.data);
+
     });
 };
