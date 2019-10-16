@@ -32,6 +32,8 @@ body {
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
+    width: auto;
+    display: inline-block;
 }
 
 .text {
