@@ -110,9 +110,18 @@ function makeSearch(){
     countArray = [];
     yearArray = [];
     boyCount = [];
-    girlCount = []; 
+    girlCount = [];
+    yearDictionary = {};
     nameToSearch = document.getElementById("enterName").value;
+    beginningYearToSearch = document.getElementById("beginningYearDropdown").value;
     yearToSearch = document.getElementById("yearDropdown").value;
+    // If user made beginning year later than year to search then swap values
+    if(beginningYearToSearch > yearToSearch){
+        var newBeginningYear = yearToSearch;
+        var newYear = beginningYearToSearch;
+        beginningYearToSearch = newBeginningYear;
+        yearToSearch = newYear;
+    }
     $.get("masterList.txt", function(data){
 
         var singleYearChecked = document.getElementById("inlineRadio1").checked;
@@ -171,7 +180,37 @@ function makeSearch(){
             chart.config.options.title.text = "Showing results for the name \'" + nameToSearch + "\' in the year \'" + yearToSearch + "\'";
             chart.update();
         } else if (yearRangeChecked){
-            console.log("year range checked");
+            var rows = data.split("\n");
+            for(row in rows){
+                var columnsInRow = rows[row].split(",");
+                var name = columnsInRow[0];
+                var gender = columnsInRow[1];
+                var count = columnsInRow[2];
+                var year = columnsInRow[3];
+    
+                if(name == nameToSearch && year <= yearToSearch && year >= beginningYearDropdown){
+                    nameArray.push(name);
+                    genderArray.push(gender);
+                    countArray.push(count);
+                    yearArray.push(year);
+                    if(gender == "F"){
+                        girlCount.push(count);
+                    } else if (gender == "M"){
+                        boyCount.push(count);
+                    }
+                }
+            };
+            if(girlCount.length == 0){
+                console.log("setting girl to 0");
+                girlCount = ["0"];
+            };
+    
+            if(boyCount.length == 0){
+                console.log("setting boy to 0");
+                boyCount = ["0"];
+            };
+
+
             var chartData = {
                 labels: yearArray,
                 datasets: [
