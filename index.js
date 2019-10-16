@@ -20,7 +20,7 @@ window.onload = function() {
             genderArray.push(gender);
             countArray.push(count);
             yearArray.push(year);
-        }
+        };
         ctx = document.getElementById('myChart').getContext('2d');
         chart = new Chart(ctx, {
             // The type of chart we want to create
@@ -59,7 +59,7 @@ function makeSearch(){
             var count = columnsInRow[2];
             var year = columnsInRow[3];
 
-            if(name == nameToSearch && year == "2000"){
+            if(name == nameToSearch && year == yearToSearch){
                 nameArray.push(name);
                 genderArray.push(gender);
                 countArray.push(count);
