@@ -110,6 +110,8 @@ function makeSearch(){
                 ]
             }
             chart.config.data = chartData;
+            chart.config.options.title.display = true;
+            chart.config.options.title.text = nameToSearch;
             chart.update();
             console.log(chart.config.data);
         } else if (yearRangeChecked){
