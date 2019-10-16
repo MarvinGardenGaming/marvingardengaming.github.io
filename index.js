@@ -8,7 +8,7 @@ var chart = null;
 window.onload = function() {
 
     var menu = document.getElementById("yearDropdown"); 
-    for (var i = 1880; i < 2019; i++){                
+    for (var i = 2018; i > 1879; i--){                
         var option = document.createElement("option");
         option.value = i;
         var optionText = document.createTextNode(i);
