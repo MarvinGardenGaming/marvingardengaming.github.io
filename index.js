@@ -14,7 +14,7 @@ window.onload = function() {
         var optionText = document.createTextNode(i);
         option.appendChild(optionText)
         beginningYearDropdown.appendChild(option);
-        beginningYearDropdown.selectedIndex = "1880";
+        beginningYearDropdown.value = "1880";
     }
 
     var yearDropdown = document.getElementById("yearDropdown"); 
@@ -24,7 +24,7 @@ window.onload = function() {
         var optionText = document.createTextNode(i);
         option.appendChild(optionText)
         yearDropdown.appendChild(option);
-        yearDropdown.selectedIndex = "2019";
+        yearDropdown.value = "2018";
     }
 
     $.get("testNames.txt", function(data){
