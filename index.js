@@ -187,17 +187,25 @@ function makeSearch(){
                 var gender = columnsInRow[1];
                 var count = columnsInRow[2];
                 var year = columnsInRow[3];
+
+                for (var i = beginningYearToSearch; i <= yearToSearch; i++){
+                    yearDictionary.push({
+                        key: i,
+                        value: [0,0]
+                    })
+                }
     
                 if(name == nameToSearch && year <= yearToSearch && year >= beginningYearDropdown){
-                    nameArray.push(name);
-                    genderArray.push(gender);
-                    countArray.push(count);
-                    yearArray.push(year);
                     if(gender == "F"){
-                        girlCount.push(count);
+                        var thisYear = yearDictionary[year].value;
+                        thisYear[0] = count;
+                        yearDictionary[year].value = thisYear;
                     } else if (gender == "M"){
-                        boyCount.push(count);
+                        var thisYear = yearDictionary[year].value;
+                        thisYear[1] = count;
+                        yearDictionary[year].value = thisYear;
                     }
+                    console.log("match found yearDictionary is: " + yearDictionary);
                 }
             };
             if(girlCount.length == 0){
