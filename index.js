@@ -94,6 +94,14 @@ window.onload = function() {
     });
 };
 
+function hideBeginYear(){
+    document.getElementById("beginningYearDropdown").style.display = "none";
+};
+
+function showBeginYear(){
+    document.getElementById("beginningYearDropdown").style.display = "inline-block";
+};
+
 function makeSearch(){
     nameArray = [];
     genderArray = [];
