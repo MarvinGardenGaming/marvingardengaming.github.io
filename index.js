@@ -77,9 +77,22 @@ function makeSearch(){
         console.log(yearRangeChecked);
         if(singleYearChecked){
             console.log("single year checked");
-            chart.config.data.labels = yearArray;
-            chart.config.data.datasets[0].data = countArray;
-            chart.config.data.datasets[0].label = nameToSearch;
+            var chartData = {
+                labels: [yearToSearch],
+                datasets: [
+                    {
+                        label: "Boy",
+                        backgroundColor: "blue",
+                        data: countArray[1]
+                    },
+                    {
+                        label: "Girl",
+                        backgroundColor: "pink",
+                        data: countArray[0]
+                    }
+                ]
+            }
+            chart.config.data = chartData;
             chart.update();
             console.log(chart.config.data);
         } else if (yearRangeChecked){
