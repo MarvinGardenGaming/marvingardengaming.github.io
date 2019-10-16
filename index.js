@@ -10,7 +10,7 @@ window.onload = function() {
     var list = document.getElementById("dropdownMenuList"); 
     for (var i = 1880; i < 2019; i++){                
         var link = document.createElement("a");             
-        link.class = "dropdown-item";
+        link.className = "dropdown-item";
         link.href = "#";
         var linkText = document.createTextNode(i);
         link.appendChild(linkText)
