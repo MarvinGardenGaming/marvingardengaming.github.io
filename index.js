@@ -14,15 +14,17 @@ window.onload = function() {
         var optionText = document.createTextNode(i);
         option.appendChild(optionText)
         beginningYearDropdown.appendChild(option);
+        beginningYearDropdown.selectedIndex = "1880";
     }
 
     var yearDropdown = document.getElementById("yearDropdown"); 
-    for (var i = 2018; i > 1879; i--){                
+    for (var i = 1880; i < 2019; i++){                
         var option = document.createElement("option");
         option.value = i;
         var optionText = document.createTextNode(i);
         option.appendChild(optionText)
         yearDropdown.appendChild(option);
+        local .selectedIndex = "2019";
     }
 
     $.get("testNames.txt", function(data){
