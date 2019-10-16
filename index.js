@@ -48,6 +48,8 @@ function makeSearch(){
     genderArray = [];
     countArray = [];
     yearArray = [];
+    boyCount = [];
+    girlCount = []; 
     nameToSearch = document.getElementById("enterName").value;
     yearToSearch = document.getElementById("enterYear").value;
     $.get("masterList.txt", function(data){
@@ -64,7 +66,11 @@ function makeSearch(){
                 genderArray.push(gender);
                 countArray.push(count);
                 yearArray.push(year);
-                console.log("match found! name is: " + name + " year is: " + year + " count is: " + count);
+                if(gender == "F"){
+                    girlCount.push(count);
+                } else if (gender == "M"){
+                    boyCount.push(count);
+                }
             }
         };
 
@@ -83,12 +89,12 @@ function makeSearch(){
                     {
                         label: "Boy",
                         backgroundColor: "blue",
-                        data: countArray[1]
+                        data: boyCount
                     },
                     {
                         label: "Girl",
                         backgroundColor: "pink",
-                        data: countArray[0]
+                        data: girlCount
                     }
                 ]
             }
@@ -103,12 +109,12 @@ function makeSearch(){
                     {
                         label: "Blue",
                         backgroundColor: "blue",
-                        data: countArray[1]
+                        data: [countArray[1]]
                     },
                     {
                         label: "Pink",
                         backgroundColor: "pink",
-                        data: countArray[0]
+                        data: [countArray[0]]
                     }
                 ]
             }
