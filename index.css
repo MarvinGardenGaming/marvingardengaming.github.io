@@ -64,7 +64,13 @@ body {
     vertical-align: middle;
 }
 
-#enterYear {
+#beginningYearDropdown {
+    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#yearDropdown {
     width: 200px;
     display: inline-block;
     vertical-align: middle;
