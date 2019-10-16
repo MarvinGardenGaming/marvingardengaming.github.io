@@ -7,6 +7,16 @@ var chart = null;
 
 window.onload = function() {
 
+    var list = document.getElementById("dropdownMenuList"); 
+    for (var i = 1880; i < 2019; i++){                
+        var link = document.createElement("a");             
+        link.class = "dropdown-item";
+        link.href = "#";
+        var linkText = document.createTextNode(i);
+        link.appendChild(linkText)
+        list.appendChild(link);
+    }
+
     $.get("testNames.txt", function(data){
         var rows = data.split("\n");
         for(row in rows){
@@ -83,15 +93,6 @@ function makeSearch(){
         console.log(yearRangeChecked);
         if(singleYearChecked){
             console.log("single year checked");
-            var list = document.getElementById("dropdownMenuList"); 
-            for (var i = 1880; i < 2019; i++){                
-                var link = document.createElement("a");             
-                link.class = "dropdown-item";
-                link.href = "#";
-                var linkText = document.createTextNode(i);
-                link.appendChild(linkText)
-                list.appendChild(link);
-            }
             var chartData = {
                 labels: [yearToSearch],
                 datasets: [
