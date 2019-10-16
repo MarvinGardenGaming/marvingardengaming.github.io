@@ -7,13 +7,22 @@ var chart = null;
 
 window.onload = function() {
 
-    var menu = document.getElementById("yearDropdown"); 
+    var beginningYearDropdown = document.getElementById("beginningYearDropdown"); 
+    for (var i = 1880; i < 2019; i++){                
+        var option = document.createElement("option");
+        option.value = i;
+        var optionText = document.createTextNode(i);
+        option.appendChild(optionText)
+        beginningYearDropdown.appendChild(option);
+    }
+
+    var yearDropdown = document.getElementById("yearDropdown"); 
     for (var i = 2018; i > 1879; i--){                
         var option = document.createElement("option");
         option.value = i;
         var optionText = document.createTextNode(i);
         option.appendChild(optionText)
-        menu.appendChild(option);
+        yearDropdown.appendChild(option);
     }
 
     $.get("testNames.txt", function(data){
@@ -83,16 +92,6 @@ window.onload = function() {
             });
         }
     });
-};
-
-function createDropdown(){
-    console.log("Code to create dropdown");
-    document.getElementById("yearDropdown").style.display = "inline-block";
-};
-
-function createSlider(){
-    console.log("Code to create slider");
-    document.getElementById("yearDropdown").style.display = "none";
 };
 
 function makeSearch(){
@@ -187,32 +186,3 @@ function makeSearch(){
         }
     });
 };
-
-
-var $amount = $('#amount'),
-    $min = $('.min'),
-    $max = $('.max'),
-    $min_input = $('#min'),
-    $max_input = $('#max'),
-    $slider = $('#yearSlider').slider({
-  orientation: 'horizontal',
-  animate: "fast",
-  range: true,
-  min: 1800,
-  max: 2015,
-  values: [ 1800, 2015 ],
-  slide: function(event, ui) {
-    adjust(ui.values[0], ui.values[1]);
-  }
-});
-function adjust(min, max) {
-  $min.html(min);
-  $max.html(max);
-  $min_input.val(min);
-  $max_input.val(max);
-  $slider.find('.ui-slider-handle:first-of-type').attr('data-content',min);
-  $slider.find('.ui-slider-handle:last-of-type').attr('data-content',max);
-}
-var min = $slider.slider('values', 0);
-var max = $slider.slider('values', 1);
-adjust(min, max);
