@@ -60,7 +60,7 @@ function makeSearch(){
     boyCount = [];
     girlCount = []; 
     nameToSearch = document.getElementById("enterName").value;
-    yearToSearch = document.getElementById("enterYear").value;
+    yearToSearch = document.getElementById("yearDropdown").value;
     $.get("masterList.txt", function(data){
         var rows = data.split("\n");
         for(row in rows){
