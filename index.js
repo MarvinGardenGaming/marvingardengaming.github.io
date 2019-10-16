@@ -69,6 +69,11 @@ function makeSearch(){
         };
 
         console.log(chart.config.data);
+        if(document.getElementById("inlineRadio1").checked == "checked"){
+            console.log("single year checked");
+        } else if (document.getElementById("inlineRadio2").checked == "checked"){
+            console.log("year range checked");
+        }
         chart.config.data.labels = yearArray;
         chart.config.data.datasets[0].data = countArray;
         chart.config.data.datasets[0].label = nameToSearch;
