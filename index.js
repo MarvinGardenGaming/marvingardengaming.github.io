@@ -83,6 +83,11 @@ function makeSearch(){
             }
         };
 
+        console.log(typeof boyCount);
+        console.log(boyCount);
+        console.log(typeof girlCount);
+        console.log(girlCount);
+
         console.log(chart.config.data);
         var singleYearChecked = document.getElementById("inlineRadio1").checked;
         var yearRangeChecked = document.getElementById("inlineRadio2").checked;
