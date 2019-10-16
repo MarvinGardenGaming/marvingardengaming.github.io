@@ -7,14 +7,16 @@ var chart = null;
 
 window.onload = function() {
 
-    var list = document.getElementById("dropdownMenuList"); 
+    var menu = document.getElementById("dropdownMenuList"); 
     for (var i = 1880; i < 1885; i++){                
-        var link = document.createElement("a");             
+        var link = document.createElement("a");
+        var list = document.createElement("li");         
         link.className = "dropdown-item";
         link.href = "#";
         var linkText = document.createTextNode(i);
         link.appendChild(linkText)
         list.appendChild(link);
+        menu.appendChild(list);
     }
 
     $.get("testNames.txt", function(data){
