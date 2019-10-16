@@ -69,16 +69,36 @@ function makeSearch(){
         };
 
         console.log(chart.config.data);
+        var checkBox1 = document.getElementById("inlineRadio1");
+        var checkBox2 = document.getElementById("inlineRadio2");
+        console.log("check box 1 is: ");
+        console.log(checkBox1);
+        console.log("check box 2 is: ");
+        console.log(checkBox2);
         if(document.getElementById("inlineRadio1").checked == "checked"){
             console.log("single year checked");
+            chart.config.data.labels = yearArray;
+            chart.config.data.datasets[0].data = countArray;
+            chart.config.data.datasets[0].label = nameToSearch;
+            chart.update();
+            console.log(chart.config.data);
         } else if (document.getElementById("inlineRadio2").checked == "checked"){
             console.log("year range checked");
+            var chartData = {
+                labels: ["Girl", "Boy"],
+                datasets: [
+                    {
+                        label: "Blue",
+                        backgroundColor: "blue",
+                        data: countArray[1]
+                    },
+                    {
+                        label: "Pink",
+                        backgroundColor: "pink",
+                        data: countArray[0]
+                    }
+                ]
+            }
         }
-        chart.config.data.labels = yearArray;
-        chart.config.data.datasets[0].data = countArray;
-        chart.config.data.datasets[0].label = nameToSearch;
-        chart.update();
-        console.log(chart.config.data);
-
     });
 };
