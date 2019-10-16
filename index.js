@@ -83,7 +83,7 @@ function makeSearch(){
         console.log(yearRangeChecked);
         if(singleYearChecked){
             console.log("single year checked");
-            var list = document.getElementById("projectSelectorDropdown"); 
+            var list = document.getElementById("dropdownMenuList"); 
             for (var i = 1880; i < 2019; i++){                
                 var li = document.createElement("li");
                 var link = document.createElement("a");             
