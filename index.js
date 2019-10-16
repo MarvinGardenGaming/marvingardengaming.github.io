@@ -64,7 +64,7 @@ function makeSearch(){
                 genderArray.push(gender);
                 countArray.push(count);
                 yearArray.push(year);
-                console.log("match found! name is: " + name + " year is: " + year);
+                console.log("match found! name is: " + name + " year is: " + year + " count is: " + count);
             }
         };
 
