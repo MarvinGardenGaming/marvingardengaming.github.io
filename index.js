@@ -87,14 +87,16 @@ function makeSearch(){
                 labels: [yearToSearch],
                 datasets: [
                     {
-                        label: "Boy",
-                        backgroundColor: "blue",
-                        data: boyCount
+                        label: "Pink",
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: "white",
+                        data: girlCount
                     },
                     {
-                        label: "Girl",
-                        backgroundColor: "pink",
-                        data: girlCount
+                        label: "Blue",
+                        backgroundColor: 'rgb(102, 156, 236)',
+                        borderColor: "white",
+                        data: boyCount
                     }
                 ]
             }
