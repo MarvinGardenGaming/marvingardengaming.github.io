@@ -57,8 +57,8 @@ function makeSearch(){
     genderArray = [];
     countArray = [];
     yearArray = [];
-    boyCount = null;
-    girlCount = null; 
+    boyCount = [];
+    girlCount = []; 
     nameToSearch = document.getElementById("enterName").value;
     yearToSearch = document.getElementById("yearDropdown").value;
     $.get("masterList.txt", function(data){
@@ -82,12 +82,12 @@ function makeSearch(){
                 }
             }
         };
-        if(girlCount == null){
+        if(girlCount == []){
             console.log("setting girl to 0");
             girlCount = ["0"];
         };
 
-        if(boyCount == null){
+        if(boyCount == []){
             console.log("setting boy to 0");
             boyCount = ["0"];
         };
