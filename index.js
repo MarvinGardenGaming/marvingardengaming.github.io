@@ -88,6 +88,14 @@ function makeSearch(){
         console.log(typeof girlCount);
         console.log(girlCount);
 
+        if(girlCount == []){
+            girlCount = ["0"];
+        };
+
+        if(boyCount == []){
+            boyCount = ["0"];
+        };
+
         console.log(chart.config.data);
         var singleYearChecked = document.getElementById("inlineRadio1").checked;
         var yearRangeChecked = document.getElementById("inlineRadio2").checked;
