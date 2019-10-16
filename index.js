@@ -70,7 +70,8 @@ function makeSearch(){
 
         console.log(chart.config.data);
         chart.config.data.labels = yearArray;
-        chart.config.data.datasets.data = countArray;
+        chart.config.data.datasets[0].data = countArray;
+        chart.config.data.datasets[0].label = nameToSearch;
         chart.update();
         console.log(chart.config.data);
 
