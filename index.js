@@ -194,8 +194,8 @@ var $amount = $('#amount'),
     $max = $('.max'),
     $min_input = $('#min'),
     $max_input = $('#max'),
-    $slider = $('#slider').slider({
-  orientation: 'vertical',
+    $slider = $('#yearSlider').slider({
+  orientation: 'horizontal',
   animate: "fast",
   range: true,
   min: 1800,
