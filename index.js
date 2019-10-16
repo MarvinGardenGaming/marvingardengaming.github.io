@@ -83,6 +83,16 @@ function makeSearch(){
         console.log(yearRangeChecked);
         if(singleYearChecked){
             console.log("single year checked");
+            var list = document.getElementById("projectSelectorDropdown"); 
+            for (var i = 1880; i < 2019; i++){                
+                var li = document.createElement("li");
+                var link = document.createElement("a");             
+                var text = document.createTextNode(i);
+                link.appendChild(text);
+                link.href = "#";
+                li.appendChild(link);
+                list.appendChild(li);
+            }
             var chartData = {
                 labels: [yearToSearch],
                 datasets: [
