@@ -7,16 +7,13 @@ var chart = null;
 
 window.onload = function() {
 
-    var menu = document.getElementById("dropdownMenuList"); 
+    var menu = document.getElementById("yearDropdown"); 
     for (var i = 1880; i < 2019; i++){                
-        var link = document.createElement("a");
-        var list = document.createElement("li");         
-        link.className = "dropdown-item";
-        link.href = "#";
-        var linkText = document.createTextNode(i);
-        link.appendChild(linkText)
-        list.appendChild(link);
-        menu.appendChild(list);
+        var option = document.createElement("option");
+        option.value = i;
+        var optionText = document.createTextNode(i);
+        option.appendChild(optionText)
+        menu.appendChild(option);
     }
 
     $.get("testNames.txt", function(data){
