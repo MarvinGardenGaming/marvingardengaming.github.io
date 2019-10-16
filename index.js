@@ -69,8 +69,8 @@ function makeSearch(){
         };
 
         console.log(chart.config.data);
-        var checkBox1 = document.getElementById("inlineRadio1");
-        var checkBox2 = document.getElementById("inlineRadio2");
+        var checkBox1 = document.getElementById("inlineRadio1").checked;
+        var checkBox2 = document.getElementById("inlineRadio2").checked;
         console.log("check box 1 is: ");
         console.log(checkBox1);
         console.log("check box 2 is: ");
