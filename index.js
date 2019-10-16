@@ -8,7 +8,7 @@ var chart = null;
 window.onload = function() {
 
     var list = document.getElementById("dropdownMenuList"); 
-    for (var i = 1880; i < 2019; i++){                
+    for (var i = 1880; i < 1885; i++){                
         var link = document.createElement("a");             
         link.className = "dropdown-item";
         link.href = "#";
