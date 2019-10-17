@@ -196,8 +196,10 @@ function makeSearch(){
                     })
                 }
                 
+                console.log("name is: " + name + "year is " + year + " year to search is " + yearToSearch + " beginning year to search is " + beginningYearToSearch);
+
                 //If name is found within search range update the first value for female and second value for male
-                if(name == nameToSearch && year <= yearToSearch && year >= beginningYearDropdown){
+                if(name == nameToSearch && year <= yearToSearch && year >= beginningYearToSearch){
                     if(gender == "F"){
                         var thisYear = yearDictionary[year].value;
                         thisYear[0] = count;
