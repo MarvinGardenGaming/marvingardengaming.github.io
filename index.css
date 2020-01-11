@@ -6,6 +6,22 @@ body {
     background-size: cover;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+
 @font-face {
   font-family: "EFT";
   src: url(1_EFT_by_iWolf.ttf);
