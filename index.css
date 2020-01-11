@@ -1,91 +1,12 @@
 body {
-	background: url("background.png") no-repeat center center fixed; 
+	background: url("customs.png") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.tab-container {
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: rgba(236, 236, 236, 0.3);
-    background-clip: content-box;
-}
-
-.nav-tabs {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.tab-content{
-    display: inline-block;
-    width: 80%;
-    height: 100%;
-}
-
-.form-check-inline {
-    display: inline-block;
-}
-
-#yearDropdown {
-    height: auto;
-    max-height: 200px;
-    overflow-x: hidden;
-    width: auto;
-    display: inline-block;
-}
-
-.text {
-    text-align: center;
-    color: white;
-    font-size: 8vw;
-    font-family: customFont
-}
-
-.chart-container {
-    
-}
-
-#chart-form-control {
-    padding-top: 10px;
-    padding-left: auto;
-    padding-right: auto;
-}
-
-#myChart {
-    position: relative;
-    background-color: rgba(236, 236, 236, 0.3);
-}
-
-#enterName {
-    width: 200px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#beginningYearDropdown {
-    width: 200px;
-    display: none;
-    vertical-align: middle;
-}
-
-#yearDropdown {
-    width: 200px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    font-size: 5vw;
-}
-
 @font-face {
-  font-family: customFont;
-  src: url(customFont.ttf);
+  font-family: 1_EFT_by_iWolf;
+  src: url(1_EFT_by_iWolf.ttf);
 }

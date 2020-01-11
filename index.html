@@ -17,53 +17,11 @@
 <body>
 
     <div>
-        <header class="text">Name Statistical Analysis</header>
-    </div>
-
-    <div class= "tab-container">
-        <ul class="nav nav-tabs nav-stacked">
-            <li class="active"><a href="#tab1" data-toggle="tab">Search A Name</a></li>
-            <li><a href="#tab2" data-toggle="tab">Compare Names</a></li>
-            <li><a href="#tab3" data-toggle="tab">Trending Names</a></li>
-        </ul>
-
-
-        <div class="tab-content">
-            <div class="tab-pane fade in active" id="tab1">
-                <div class="chart-container">
-                    <canvas id="myChart"></canvas>
-                </div>
-            
-                <div id="chart-form-control">
-                    <form name="searchName">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="enterName" placeholder="Enter a Name">
-                            <select class="form-control" id="beginningYearDropdown"></select>
-                            <select class="form-control" id="yearDropdown"></select>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" onchange="hideBeginYear();" id="inlineRadio1" value="option1" checked="checked">
-                                <label class="form-check-label" for="inlineRadio1">Single Year</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" onchange="showBeginYear();" id="inlineRadio2" value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Year Range</label>
-                            </div>
-                            <button type="button" class="btn btn-default" onclick="makeSearch()">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="tab2">
-                Tab 2 content              
-            </div>
-            <div class="tab-pane fade" id="tab3">
-                Tab 3 content
-            </div>
-        </div>
+        <header class="text">Tarkov Keys</header>
     </div>
 
     <div>
-        <!--<footer class="text" id="footer">Currently In Development By Zachary Marvin</footer>-->
+        <footer class="text" id="footer">Currently In Development By Zachary Marvin and Dustin Van Gordon</footer>
     </div>
 
 </body>
