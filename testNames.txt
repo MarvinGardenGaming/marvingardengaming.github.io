@@ -1,0 +1,5 @@
+Mary,F,7065,2000
+Anna,F,2604,2000
+Emma,F,2003,2000
+Elizabeth,F,1939,2000
+Minnie,F,1746,2000
