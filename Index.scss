@@ -1,0 +1,693 @@
+
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+    .nested-cell3{
+        height: 0 !important;
+        display: none !important;
+    }
+}
+
+// Ipad and smaller
+@media only screen and (max-width: 1024px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .cell1{
+        background-color: white !important;
+    }
+    .cell2{
+        .projectName{
+            font-size: 5vw !important;
+        }
+    }
+    .left-side-background{
+        width: 0 !important;
+    }
+    .right-side-background{
+        width: 0 !important;
+    }
+
+    .nested-row-container{
+        width: 100% !important;
+    }
+
+    #firstNav{
+        width: 0 !important;
+    }
+
+    #secondNav{
+        width: 0 !important;
+    }
+
+    #thirdNav{
+        width: 0 !important;
+    }
+
+    #fourthNav{
+        width: 0 !important;
+    }
+
+    .cell6{
+        height: 33.3vh !important;
+    }
+
+    .Intro{
+        font-size: 12px !important;
+        color: black !important;
+    }
+
+    .projectDesc{
+        font-size: 2vh !important;
+    }
+}
+
+// IphoneX and smaller
+@media only screen and (max-width: 400px) {
+    .Intro{
+        font-size: 10px !important;
+    }
+
+    .cell2{
+        .projectName{
+            font-size: 6vw !important;
+        }
+    }
+}
+
+// iPhone 5/SE and smaller
+@media only screen and (max-width: 320px) {
+    .Intro{
+        font-size: 8px !important;
+    }
+}
+
+@mixin baseStyle {
+    background-color: green;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body {
+    background-color: grey;
+    overflow: hidden;
+    margin: 0;
+
+    canvas{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .sidenav {
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Stay on top */
+        top: 0; /* Stay at the top */
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+        .a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.2s;
+
+            &:hover{
+                color: #f1f1f1;
+            }
+
+            .closebtn{
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    #firstNav{
+        left: 0;
+    }
+
+    #secondNav{
+        right: 0;
+    }
+
+    #thirdNav{
+        left: 0;
+    }
+
+    #fourthNav{
+        right: 0;
+    }
+
+    .grid-container{
+        display: grid;
+        background-color: white;
+        max-height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(3rem);
+        scroll-snap-type: y mandatory;
+
+        .cells{
+            @include baseStyle();
+            scroll-snap-align: start;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .cell1{
+            background-color: rgb(47, 47, 47);
+            grid-area: a;
+            position: relative;
+
+            .Intro{
+                position: absolute;
+                display: flex;
+                align-self: center;
+                color: whitesmoke;
+                font-size: 1rem;
+            }
+            #Introduction1{
+                padding-bottom: 9rem;
+                #myName{
+                    padding-left: 0.5rem;
+                    color: maroon;
+                    font-family: 'Roboto Condensed', sans-serif;
+                    font-weight: 700;
+                    font-style: italic;
+                }
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+
+            #Introduction2{
+                padding-bottom: 3rem;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+            
+            #Introduction3{
+                padding-top: 3rem;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+            #Introduction4{
+                padding-top: 9rem;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+        }
+        
+        .cell2{
+            background-color: rgb(0, 4, 17);
+            grid-area: b;
+            .nested-column-container{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+
+                .left-side-background{
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .nested-row-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    .projectName{
+                        font-size: 3vw;
+                        align-self: center;
+                        font-weight: 700;
+                    }
+
+                    .projectDesc{
+                        align-self: center;
+                        text-align: center;
+                        font-size: 3vh;
+                        font-weight: 400;
+                        margin-top: 0;
+                    }
+
+                    .nested-cells{
+                        @include baseStyle();
+                        
+                        justify-content: start;
+                    } 
+                    .nested-cell1{
+                        width: 100%;
+                        background: linear-gradient(0deg, rgb(223, 232, 235) ,rgb(182, 199, 204));
+
+                    }
+                    .nested-cell2{
+                        background: linear-gradient(0deg, rgb(223, 232, 235), rgb(223, 232, 235));
+                    }
+                    .nested-cell3{
+                        background-color: pink;
+                    }
+                    .iconsContainer{
+                        align-self: center;
+                    }
+                    #jsIcon{
+                        width: 10vw;
+                        transform: rotate(-14deg);
+                        padding-top: 3vh;
+                    }
+                    #jqueryIcon{
+                        width: 10vw;
+                        transform: rotate(-12deg);
+                        padding-bottom: 3vh;
+                    }
+                    #htmlIcon{
+                        width: 8vw;
+                        transform: rotate(7deg);
+                        padding-top: 3vh;
+                    }
+                    #cssIcon{
+                        width: 8vw;
+                        transform: rotate(-11deg);
+                        padding-bottom: 5vh;
+                    }
+
+                    .techIcons{
+                        padding-left: 1vw;
+                    }
+                }
+            }
+        }
+
+        .cell3{
+            background-color: rgb(124, 82, 82);
+            grid-area: c;
+            .nested-column-container{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+
+                .right-side-background{
+                    width: 50%;
+                }
+
+                .nested-row-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .nested-cells{
+                        @include baseStyle();
+                    } 
+                    .nested-cell1{
+                        width: 100%;
+                        background-color: rgb(130, 255, 130);
+                    }
+                    .nested-cell2{
+                        background-color: rgb(130, 184, 255);
+                    }
+                    .nested-cell3{
+                        background-color: pink;
+                    }
+                }
+            }
+        }
+
+        .cell4{
+            background-color: rgb(182, 103, 182);
+            grid-area: d;
+            .nested-column-container{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+
+                .left-side-background{
+                    width: 50%;
+                }
+
+                .nested-row-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .nested-cells{
+                        @include baseStyle();
+                    } 
+                    .nested-cell1{
+                        width: 100%;
+                        background-color: rgb(130, 255, 130);
+                    }
+                    .nested-cell2{
+                        background-color: rgb(130, 184, 255);
+                    }
+                    .nested-cell3{
+                        background-color: pink;
+                    }
+                }
+            }
+        }
+
+        .cell5{
+            background-color: rgb(124, 82, 82);
+            grid-area: e;
+            .nested-column-container{
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+
+                .right-side-background{
+                    width: 50%;
+                }
+
+                .nested-row-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .nested-cells{
+                        @include baseStyle();
+                    } 
+                    .nested-cell1{
+                        width: 100%;
+                        background-color: rgb(130, 255, 130);
+                    }
+                    .nested-cell2{
+                        background-color: rgb(130, 184, 255);
+                    }
+                    .nested-cell3{
+                        background-color: pink;
+                    }
+                }
+            }
+        }
+
+        .cell6{
+            background-color: rgb(255, 164, 122);
+            grid-area: f;
+            height: 100vh;
+        }
+
+        grid-gap: 0px;
+
+        grid-template-areas: 
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f";
+    }
+}
+
+
+
+
+//SCSS for solar system
+$year-in-second : 30; // 1 Earth year = 30 sec
+
+@function revolution($pl-year-in-days){
+  @return $pl-year-in-days * $year-in-second / 365.2563 + s  //Earth reference
+}
+@function alphaRandom(){
+  @return random(1000)*.001;
+}
+@function stars($s, $max-area, $min-area : 0, $star-size : 0){
+  $stars : #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, alphaRandom()); 
+  @for $i from 1 to $s{
+    $stars: '#{$stars} , #{$min-area + random($max-area)}px #{$min-area + random($max-area)}px 0 #{$star-size}px rgba(255,255,255, #{alphaRandom()})'
+  }
+  @return unquote($stars);
+}
+
+$sun: 40px;
+$mercury-orb : 70px; $mercury-pl: 4px; 
+$venus-orb : 100px; $venus-pl: 8px; 
+$earth-orb : 145px; $earth-pl: 6px; 
+$mars-orb : 190px; $mars-pl: 6px;
+$jupiter-orb : 340px; $jupiter-pl: 18px; 
+$saturn-orb : 440px; $saturn-pl: 12px;
+$uranus-orb : 520px; $uranus-pl: 10px;
+$neptune-orb : 630px; $neptune-pl: 10px;
+$pluto-orb : 780px; $pluto-pl: 3px;
+
+$asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
+
+.solar-syst{
+    overflow: hidden;
+  &:after{
+    content:"";
+    position:absolute;
+    height:2px;
+    width:2px;
+    top:-2px;
+    background:white;
+    box-shadow: stars(1000, 1800);
+    border-radius:100px;
+  }
+  margin:0 auto;
+  width:100%;
+  height:100%;
+  position:relative;
+  div{
+    border-radius:1000px;
+    top:50%;
+    left:50%;
+    position:absolute;
+    z-index:500;
+    &:not(.sun){
+      border: 1px solid rgba(102, 166, 229, 0.12);
+      &:before{
+        left:50%;
+        border-radius:100px;
+        content:"";
+        position:absolute;
+      }
+    }
+    &:not(.asteroids-belt){
+      &:before{
+        box-shadow: inset 0 6px 0 -2px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
+
+.sun{
+  background:radial-gradient(ellipse at center, #ffd000 1%,#f9b700 39%,#f9b700 39%,#e06317 100%);
+  height:$sun;
+  width:$sun;
+  margin-top: -$sun / 2;
+  margin-left: -$sun / 2;
+  background-clip: padding-box;
+  border:0 !important;
+  background-position: -28px -103px;
+  background-size: 175%;
+  box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
+}
+
+.mercury{
+  height: $mercury-orb;
+  width: $mercury-orb;
+  margin-top: -$mercury-orb / 2;
+  margin-left: -$mercury-orb / 2;
+  animation: orb revolution(87.5) linear infinite;
+  &:before{
+    height:$mercury-pl;
+    width:$mercury-pl;
+    background: #9f5e26;
+    margin-top: -$mercury-pl / 2;
+    margin-left: -$mercury-pl / 2;
+  }
+}
+
+.venus{
+  height: $venus-orb;
+  width: $venus-orb;
+  margin-top: -$venus-orb / 2;
+  margin-left: -$venus-orb / 2;
+  animation: orb revolution(224.7) linear infinite;
+  &:before{
+    height:$venus-pl;
+    width:$venus-pl;
+    background:#BEB768;
+    margin-top: -$venus-pl / 2;
+    margin-left: -$venus-pl / 2;
+  }
+}
+
+.earth{
+  height: $earth-orb;
+  width: $earth-orb;
+  margin-top: -$earth-orb / 2;
+  margin-left: -$earth-orb / 2;
+  animation: orb revolution(365.2563) linear infinite;
+  &:before{
+    height:$earth-pl;
+    width:$earth-pl;
+    background:#11abe9;
+    margin-top: -$earth-pl / 2;
+    margin-left: -$earth-pl / 2;
+  }
+  &:after{
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 50%;
+    top: 0px;
+    margin-left: -9px;
+    margin-top: -9px;
+    border-radius: 100px;
+    box-shadow: 0 -10px 0 -8px grey;
+    animation: orb revolution(27.3216) linear infinite;
+  }
+}
+.mars{
+  height: $mars-orb;
+  width: $mars-orb;
+  margin-top: -$mars-orb / 2;
+  margin-left: -$mars-orb / 2;
+  animation: orb revolution(687) linear infinite;
+  &:before{
+    height:$mars-pl;
+    width:$mars-pl;
+    background:#cf3921;
+    margin-top: -$mars-pl / 2;
+    margin-left: -$mars-pl / 2;
+  }
+}
+
+.jupiter{
+  height: $jupiter-orb;
+  width: $jupiter-orb;
+  margin-top: -$jupiter-orb / 2;
+  margin-left: -$jupiter-orb / 2;
+  animation: orb revolution(4331) linear infinite;
+  &:before{
+    height:$jupiter-pl;
+    width:$jupiter-pl;
+    background:#c76e2a;
+    margin-top: -$jupiter-pl / 2;
+    margin-left: -$jupiter-pl / 2;
+  }
+}
+.saturn{
+  height: $saturn-orb;
+  width: $saturn-orb;
+  margin-top: -$saturn-orb / 2;
+  margin-left: -$saturn-orb / 2;
+  animation: orb revolution(10747) linear infinite;
+  &:before{
+    height:$saturn-pl;
+    width:$saturn-pl;
+    background:#e7c194;
+    margin-top: -$saturn-pl / 2;
+    margin-left: -$saturn-pl / 2;
+  }
+  &:after{
+    position: absolute;
+    content: "";
+    height: 2.34%; 
+    width: 4.676%;
+    left: 50%;
+    top: 0px;
+    transform: rotateZ(-52deg);
+    margin-left: -2.3%;
+    margin-top: -1.2%;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 1px 0 1px #987641, 3px 1px 0 #987641, -3px 1px 0 #987641;
+    animation: orb revolution(10747) linear infinite;
+    animation-direction: reverse; // compensate to reverse main orbit animation
+    transform-origin: 52% 60%;
+  }
+}
+
+.uranus{
+  height: $uranus-orb;
+  width: $uranus-orb;
+  margin-top: -$uranus-orb / 2;
+  margin-left: -$uranus-orb / 2;
+  animation: orb revolution(30589) linear infinite;
+  &:before{
+    height:$uranus-pl;
+    width:$uranus-pl;
+    background:#b5e3e3;
+    margin-top: -$uranus-pl / 2;
+    margin-left: -$uranus-pl / 2;
+  }
+}
+
+.neptune{
+  height: $neptune-orb;
+  width: $neptune-orb;
+  margin-top: -$neptune-orb / 2;
+  margin-left: -$neptune-orb / 2;
+  animation: orb revolution(59802) linear infinite;
+  &:before{
+    height:$neptune-pl;
+    width:$neptune-pl;
+    background:#175e9e;
+    margin-top: -$neptune-pl / 2;
+    margin-left: -$neptune-pl / 2;
+  }
+}
+
+.asteroids-belt{
+  opacity:.7;
+  border-color: transparent !important;
+  height: $asteroids-belt-orb;
+  width: $asteroids-belt-orb;
+  margin-top: -$asteroids-belt-orb / 2;
+  margin-left: -$asteroids-belt-orb / 2;
+  animation: orb revolution(2191) linear infinite;
+  overflow:hidden;
+  &:before{
+    top:50%;
+    height:$asteroids-belt-pl;
+    width:$asteroids-belt-pl;
+    margin-left: -$asteroids-belt-pl / 2;
+    margin-top: -$asteroids-belt-pl / 2;
+    background: transparent;
+    border-radius:140px !important;
+    box-shadow: stars(390, 290, -290/2, -104);
+  }
+}
+
+.pluto{
+  height: $pluto-orb;
+  width: $pluto-orb;
+  margin-top: -$pluto-orb / 2 + -60;
+  margin-left: -$pluto-orb / 2 + 70;
+  animation: orb revolution(90580) linear infinite;
+  &:before{
+    height:$pluto-pl;
+    width:$pluto-pl;
+    background:#fff;
+    margin-top: -$pluto-pl / 2;
+    margin-left: -$pluto-pl / 2;
+  }
+}
+
+.hide{
+  display:none;
+}
+.links{
+  margin-top:5px !important;
+  font-size:1em !important;
+}
+
+@keyframes orb{
+  from {
+    transform:rotate(0deg)
+  }
+  to{
+    transform:rotate(-360deg)
+  }
+}
