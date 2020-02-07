@@ -18,6 +18,7 @@
     .cell2{
         .projectName{
             font-size: 5vw !important;
+            margin-top: 10vh !important;
         }
     }
     .left-side-background{
@@ -59,6 +60,31 @@
     .projectDesc{
         font-size: 2vh !important;
     }
+
+    #jsIcon{
+        width: 18vw !important;
+        padding-top: 3vh !important;
+    }
+    #jqueryIcon{
+        width: 16vw !important;
+        padding-bottom: 2vh !important;
+    }
+    #htmlIcon{
+        width: 14vw !important;
+        padding-top: 3vh !important;
+    }
+    #cssIcon{
+        width: 14vw !important;
+        padding-bottom: 2vh !important;
+    }
+
+    .techIcons{
+        padding-left: 4vw !important;
+    }
+    
+    #techUsed{
+        margin-top: 5vh !important;
+    }
 }
 
 // IphoneX and smaller
@@ -71,6 +97,28 @@
         .projectName{
             font-size: 6vw !important;
         }
+    }
+
+    
+    #jsIcon{
+        width: 21vw !important;
+        padding-top: 4vh !important;
+    }
+    #jqueryIcon{
+        width: 19vw !important;
+        padding-bottom: 3vh !important;
+    }
+    #htmlIcon{
+        width: 17vw !important;
+        padding-top: 4vh !important;
+    }
+    #cssIcon{
+        width: 17vw !important;
+        padding-bottom: 3vh !important;
+    }
+
+    .techIcons{
+        padding-left: 2vw !important;
     }
 }
 
@@ -164,7 +212,7 @@ body {
             scroll-snap-align: start;
             font-family: 'Roboto Condensed', sans-serif;
         }
-
+        // Introduction Cell
         .cell1{
             background-color: rgb(47, 47, 47);
             grid-area: a;
@@ -208,7 +256,8 @@ body {
                 width: 100%;
             }
         }
-        
+
+        // Space News Hub Cell
         .cell2{
             background-color: rgb(0, 4, 17);
             grid-area: b;
@@ -253,17 +302,17 @@ body {
 
                     }
                     .nested-cell2{
-                        background: linear-gradient(0deg, rgb(223, 232, 235), rgb(223, 232, 235));
+                        background: linear-gradient(0deg, rgb(233, 239, 241), rgb(223, 232, 235));
                     }
                     .nested-cell3{
-                        background-color: pink;
+                        background: linear-gradient(0deg, rgb(252, 254, 255), rgb(233, 239, 241));
                     }
                     .iconsContainer{
                         align-self: center;
                     }
                     #jsIcon{
                         width: 10vw;
-                        transform: rotate(-14deg);
+                        transform: rotate(5deg);
                         padding-top: 3vh;
                     }
                     #jqueryIcon{

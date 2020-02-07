@@ -30,7 +30,7 @@ function closeAllNavs() {
 
 /* Simulate scrolling with onwheel event fired from side panel */
 function simScroll(event){
-
+  console.log("simming scroll");
   // Getting the main grid
   var grid = document.getElementById("mainGrid");
 
