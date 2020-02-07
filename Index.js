@@ -3,19 +3,9 @@ function openFirstNav() {
   document.getElementById("firstNav").style.width = "50%";
 }
 
-/* Close/hide the sidenav */
-function closeFirstNav() {
-  document.getElementById("firstNav").style.width = "0";
-}
-
 /* Open the sidenav */
 function openSecondNav() {
   document.getElementById("secondNav").style.width = "50%";
-}
-
-/* Close/hide the sidenav */
-function closeSecondNav() {
-  document.getElementById("secondNav").style.width = "0";
 }
 
 /* Open the sidenav */
@@ -23,19 +13,10 @@ function openThirdNav() {
   document.getElementById("thirdNav").style.width = "50%";
 }
 
-/* Close/hide the sidenav */
-function closeThirdNav() {
-  document.getElementById("thirdNav").style.width = "0";
-}
 
 /* Open the sidenav */
 function openFourthNav() {
   document.getElementById("fourthNav").style.width = "50%";
-}
-
-/* Close/hide the sidenav */
-function closeFourthNav() {
-  document.getElementById("fourthNav").style.width = "0";
 }
 
 /* Close/hide the sidenav */
@@ -46,6 +27,36 @@ function closeAllNavs() {
     sidenavs[i].style.width = "0";
   }
 }
+
+/* Simulate scrolling with onwheel event fired from side panel */
+function simScroll(event){
+
+  // Getting the main grid
+  var grid = document.getElementById("mainGrid");
+
+  // Getting the height of the cells
+  var cellHeight = document.getElementById("IntroCell").offsetHeight;
+
+  // Detect if wheel was scrolled up or down
+  if(event.deltaY < 0){
+    // Scroll up by cell height
+    grid.scrollBy({
+      left: 0,
+      top: -1 * cellHeight,
+      behavior: 'smooth'});
+  } else if(event.deltaY > 0){
+
+    // Scroll down by cell height
+    grid.scrollBy({
+      left: 0,
+      top: cellHeight,
+      behavior: 'smooth'});
+  }
+
+}
+
+
+
 
 // Following Code is for Intro Particles
 const parameters = {
@@ -78,9 +89,21 @@ const getMassFromRadius = radius =>
 
 const canvas = document.querySelector("canvas");
 
+// This code gets pixel ratio to handle retina displays and then multiplies returned value in setCanvisSize
+function backingScale(context) {
+  if ('devicePixelRatio' in window) {
+      if (window.devicePixelRatio > 1) {
+          return window.devicePixelRatio;
+      }
+  }
+  return 1;
+}
+
 const setCanvasSize = () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  var scaleFactor = backingScale(canvas);
+
+  canvas.width = window.innerWidth * scaleFactor;
+  canvas.height = window.innerHeight * scaleFactor;
 };
 
 setCanvasSize();
