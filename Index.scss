@@ -57,12 +57,33 @@
     }
 
     .projectDesc{
-        font-size: 2vh !important;
+        font-size: 3.5vw !important;
+    }
+
+    #jsIcon{
+        width: 18vw !important;
+        padding-top: 3vh !important;
+    }
+    #jqueryIcon{
+        width: 16vw !important;
+        padding-bottom: 2vh !important;
+    }
+    #htmlIcon{
+        width: 14vw !important;
+        padding-top: 3vh !important;
+    }
+    #cssIcon{
+        width: 14vw !important;
+        padding-bottom: 2vh !important;
+    }
+
+    .techIcons{
+        padding-left: 4vw !important;
     }
 }
 
 // IphoneX and smaller
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
     .Intro{
         font-size: 10px !important;
     }
@@ -71,6 +92,48 @@
         .projectName{
             font-size: 6vw !important;
         }
+        .projectDesc{
+            font-size: 4.5vw !important;
+        }
+    }
+
+    
+    #jsIcon{
+        width: 21vw !important;
+        padding-top: 4vh !important;
+    }
+    #jqueryIcon{
+        width: 19vw !important;
+        padding-bottom: 3vh !important;
+    }
+    #htmlIcon{
+        width: 17vw !important;
+        padding-top: 4vh !important;
+    }
+    #cssIcon{
+        width: 17vw !important;
+        padding-bottom: 3vh !important;
+    }
+
+    .techIcons{
+        padding-left: 2vw !important;
+    }
+
+    .mobilenav{
+        .details-container{
+            margin-left: 7vw !important;
+            font-size: 3.5vw !important;
+        }
+    }
+
+    #firstBoxClose{
+        width: 18px !important;
+        height: 0 !important;
+    }
+    
+    #firstBoxClose:before {
+        content: "×";
+        padding-left: 0 !important;
     }
 }
 
@@ -78,6 +141,13 @@
 @media only screen and (max-width: 320px) {
     .Intro{
         font-size: 8px !important;
+    }
+
+    .mobilenav{
+        .details-container{
+            margin-left: 6vw !important;
+            font-size: 3.5vw !important;
+        }
     }
 }
 
@@ -133,8 +203,97 @@ body {
         }
     }
 
+    #firstBoxClose{
+        float: right;
+        width: 35px;
+        height: 20px;
+        cursor: pointer;
+        color: #fff;
+        border: 1px solid #AEAEAE;
+        border-radius: 30px;
+        background: #605F61;
+        font-size: 31px;
+        font-weight: bold;
+        display: none;
+        line-height: 0px;
+        position: absolute;
+        padding: 11px 3px;
+        margin-left: 90vw;
+    }
+    
+    #firstBoxClose:before {
+        content: "×";
+        align-self: center;
+        padding-left: 8px;
+    }
+
+    .mobilenav{
+        width: 100vw;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        color: rgb(238, 243, 246);
+        background-color: #111;
+        .expanded-container{
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+            #snhImage{
+                display: flex;
+                justify-items: center;
+                align-self: start;
+                width: 80vw;
+                object-fit: contain;
+                padding-top: 5vh;
+            }
+        }
+        
+        .details-title{
+            align-self: center;
+            font-size: 4vw;
+            .expanded-title{
+                margin-top: 1vh;
+            }
+        }
+        .details-container{
+            margin-left: 9vw;
+            font-size: 2vw;
+            margin-right: 10vw;
+            li{
+                padding-top: 1.5vh;
+            }
+        }
+    }
+
     #firstNav{
         left: 0;
+        display: flex;
+        flex-direction: column;
+        color: rgb(238, 243, 246);
+        font-family: 'Roboto Condensed', sans-serif;;
+        .expanded-container{
+            display: flex;
+            width: 50vw;
+            justify-content: center;
+            #snhImage{
+                display: flex;
+                justify-items: center;
+                align-self: start;
+                width: 40vw;
+                object-fit: contain;
+            }
+        }
+        .details-title{
+            align-self: center;
+            font-size: 1.5vw;
+        }
+        .details-container{
+            margin-left: 2vw;
+            font-size: 1vw;
+            li{
+                padding-top: 1.5vh;
+            }
+        }
     }
 
     #secondNav{
@@ -164,7 +323,7 @@ body {
             scroll-snap-align: start;
             font-family: 'Roboto Condensed', sans-serif;
         }
-
+        // Introduction Cell
         .cell1{
             background-color: rgb(47, 47, 47);
             grid-area: a;
@@ -181,7 +340,8 @@ body {
                 padding-bottom: 9rem;
                 #myName{
                     padding-left: 0.5rem;
-                    color: maroon;
+                    color: rgb(202, 30, 30);
+                    text-shadow: 2px 2px 4px #000000;
                     font-family: 'Roboto Condensed', sans-serif;
                     font-weight: 700;
                     font-style: italic;
@@ -202,8 +362,14 @@ body {
                 padding-top: 9rem;
                 font-family: 'Roboto Condensed', sans-serif;
             }
+
+            #aWrapper{
+                height: 100%;
+                width: 100%;
+            }
         }
-        
+
+        // Space News Hub Cell
         .cell2{
             background-color: rgb(0, 4, 17);
             grid-area: b;
@@ -232,14 +398,13 @@ body {
                     .projectDesc{
                         align-self: center;
                         text-align: center;
-                        font-size: 3vh;
+                        font-size: 1.5vw;
                         font-weight: 400;
                         margin-top: 0;
                     }
 
                     .nested-cells{
-                        @include baseStyle();
-                        
+                        @include baseStyle();                        
                         justify-content: start;
                     } 
                     .nested-cell1{
@@ -248,17 +413,17 @@ body {
 
                     }
                     .nested-cell2{
-                        background: linear-gradient(0deg, rgb(223, 232, 235), rgb(223, 232, 235));
+                        background: linear-gradient(0deg, rgb(233, 239, 241), rgb(223, 232, 235));
                     }
                     .nested-cell3{
-                        background-color: pink;
+                        background: linear-gradient(0deg, rgb(252, 254, 255), rgb(233, 239, 241));
                     }
                     .iconsContainer{
                         align-self: center;
                     }
                     #jsIcon{
                         width: 10vw;
-                        transform: rotate(-14deg);
+                        transform: rotate(5deg);
                         padding-top: 3vh;
                     }
                     #jqueryIcon{
@@ -690,4 +855,36 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
   to{
     transform:rotate(-360deg)
   }
+}
+
+
+//Expand Button SCSS
+.expand-button-container{
+    display: flex;
+    align-self: center;
+    margin-top: 4vh;
+    .pulse-button {
+        position: relative;
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        width: 30vw;
+        height: 30vw;
+        border: none;
+        box-shadow: 0 0 0 0 #81818196;
+        border-radius: 75%;
+        background-color: #818181;
+        background-size:cover;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+        font-size: 5vw;
+        align-content: center;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 700;
+        color: white;
+    }
+      
+    @keyframes pulse {to {box-shadow: 0 0 0 45px #81818100}};
 }

@@ -9,6 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="Index.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700i&display=swap" rel="stylesheet">
     </head>
@@ -18,15 +19,35 @@
         <![endif]-->
 
 
-        <div onmouseout="closeFirstNav()" id="firstNav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeFirstNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+        <!--Space News Hub Nav Page-->
+        <div onwheel="simScroll(event)" onmouseleave="closeAllNavs()" id="firstNav" class="sidenav">
+            <div class="expanded-container">
+                <img id="snhImage" src="/Images/snhscreenshot.PNG" alt="snhscreenshot">
+            </div>
+            <div class="details-title">
+                <h1 class=expanded-title>
+                    Space News Hub
+                </h1>
+            </div>
+            <div class="details-container">
+                <ul>
+                    <li>Technical Description: spacenewshub.com is a HTML5 website that uses CSS3 and SASS for
+                    <br> styling. It also uses Bootstrap, Flexbox, and CSS Grid to help visualize items on the
+                    <br> page. Some of the functionality is written in Javascript, but a good portion of the
+                    <br> data is being pulled through REST API's and RSS feeds. Lastly this website uses twitters
+                    <br> API to pull data in directly from twitter. The point of creating this website was to
+                    <br> give people (including myself) a place to get up to date space news without having to
+                    <br> to read the opinions of publishers with click bait titles. All information on this site
+                    <br> comes directly from the source.</li>
+                    <li>Platform: Web, Mobile Web</li>
+                    <li>Release Date: 17 January 2020</li>
+                    <li>Technologies: HTML5, CSS3, JS, JQuery, Bootstrap, Flexbox, CSS Grid, REST, Twitter API</li>
+                    <li><link href="www.spacenewshub.com">Visit Here: www.spacenewshub.com</li>
+                </ul>
+            </div>
         </div>
 
-        <div onmouseout="closeSecondNav()" id="secondNav" class="sidenav">
+        <div onwheel="simScroll(event)" onmouseleave="closeAllNavs()" id="secondNav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeSecondNav()">&times;</a>
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -34,7 +55,7 @@
             <a href="#">Contact</a>
         </div>
 
-        <div onmouseout="closeThirdNav()" id="thirdNav" class="sidenav">
+        <div onwheel="simScroll(event)" onmouseleave="closeAllNavs()" id="thirdNav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeThirdNav()">&times;</a>
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -42,7 +63,7 @@
             <a href="#">Contact</a>
         </div>
 
-        <div onmouseout="closeFourthNav()" id="fourthNav" class="sidenav">
+        <div onwheel="simScroll(event)" onmouseleave="closeAllNavs()" id="fourthNav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeFourthNav()">&times;</a>
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -50,8 +71,97 @@
             <a href="#">Contact</a>
         </div>
 
-        <div onscroll="closeAllNavs()" class="grid-container">
-            <div class="cells cell1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--Space News Hub Mobile Nav Page-->
+        <div id="firstMobileNav" class="mobilenav">
+            <div onclick="closeFirstMobileNav()"id="firstBoxClose"></div>
+            <div class="expanded-container">
+                <img id="snhImage" src="/Images/snhscreenshot.PNG" alt="snhscreenshot">
+            </div>
+            <div class="details-title">
+                <h1 class=expanded-title>
+                    Space News Hub
+                </h1>
+            </div>
+            <div class="details-container">
+                <ul>
+                    <li>Technical Description: spacenewshub.com is a HTML5 website that uses CSS3 and SASS for
+                    styling. It also uses Bootstrap, Flexbox, and CSS Grid to help visualize items on the
+                    page. Some of the functionality is written in Javascript, but a good portion of the
+                    data is being pulled through REST API's and RSS feeds. Lastly this website uses twitters
+                    API to pull data in directly from twitter. The point of creating this website was to
+                    give people (including myself) a place to get up to date space news without having to
+                    to read the opinions of publishers with click bait titles. All information on this site
+                    comes directly from the source.</li>
+                    <li>Platform: Web, Mobile Web</li>
+                    <li>Release Date: 17 January 2020</li>
+                    <li>Technologies: HTML5, CSS3, JS, JQuery, Bootstrap, Flexbox, CSS Grid, REST, Twitter API</li>
+                    <li><link href="www.spacenewshub.com">Visit Here: www.spacenewshub.com</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div onscroll="closeAllNavs()" id="mainGrid" class="grid-container">
+            <div id="IntroCell" class="cells cell1">
                 <div class="Intro" id="Introduction1">
                     <h1>Hello, my name is </h1><h1 id="myName">Zac Marvin.</h1>
                 </div>
@@ -88,17 +198,17 @@
                     <div class="nested-row-container">
                         <div class="nested-cells nested-cell1">
                             <p class="projectName">Space News Hub</p>
-                            <p class="projectDesc">Space News Hub is a website I decided to create on a whim <br>
-                            I'm obsessed with space and I was tired of having to visit<br>
-                            multiple websites to get all of my space news from the source.<br>
-                            So I decided to build a site that pulls data in directly from many<br>
-                            different space related sites like nasa.com and spacex.com. There<br>
-                            are no ads on my site. No opinionated news articles. No drama.<br>
-                            Just Space News.
+                            <p class="projectDesc">Space News Hub is a site I decided to create on a whim.<br>
+                            I'm obsessed with space and I was tired of visiting<br>
+                            multiple sites to get all of my space news. So I<br>
+                            built my own site that pulls data directly from many<br>
+                            space related sites like nasa.com and spacex.com.<br>
+                            There are no ads on my site. No distractions.<br>
+                            No Drama. Just Space News.
                             </p>
                         </div>
                         <div class="nested-cells nested-cell2">
-                            <p class="projectName">Technologies Used</p>
+                            <p id="techUsed" class="projectName">Technologies Used</p>
                             <div class="iconsContainer">
                                 <img class="techIcons" id="jsIcon" src=/Images/js.png alt="Javascript">
                                 <img class="techIcons" id="jqueryIcon" src=/Images/jquery.png alt="JQuery">
@@ -106,7 +216,11 @@
                                 <img class="techIcons" id="cssIcon" src=/Images/css.png alt="CSS3">
                             </div>
                         </div>
-                        <div class="nested-cells nested-cell3">Hidden Cell</div>
+                        <div class="nested-cells nested-cell3">
+                            <div class='expand-button-container'>
+                                <span onclick="openFirstMobileNav()" class='pulse-button'>View More<br>Here!</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
