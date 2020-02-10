@@ -51,6 +51,8 @@ function openFirstMobileNav() {
 
   var thisBoxClose = document.getElementById("firstBoxClose");
   thisBoxClose.style.display = "flex";
+
+  document.ontouchmove = function(e){ e.preventDefault(); }
 }
 
 /* Close the mobile nav */
@@ -60,6 +62,8 @@ function closeFirstMobileNav() {
 
   var thisBoxClose = document.getElementById("firstBoxClose");
   thisBoxClose.style.display = "none";
+
+  document.ontouchmove = function(e){ return true; }
 }
 
 

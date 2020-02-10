@@ -171,6 +171,30 @@ body {
         align-items: center;
     }
 
+    
+    .external-link{
+            
+        animation: glow 1s ease-in-out infinite alternate;
+
+        a{
+            &:link{
+                color: white;
+            }
+
+            &:visited{
+                color: white;
+            }
+
+            &:hover{
+                color: white;
+            }
+
+            &:active{
+                color: white;
+            }
+        }
+    }
+
     .sidenav {
         height: 100%; /* 100% Full-height */
         width: 0; /* 0 width - change this with JavaScript */
@@ -219,6 +243,7 @@ body {
         position: absolute;
         padding: 11px 3px;
         margin-left: 90vw;
+        margin-top: 2vh;
     }
     
     #firstBoxClose:before {
@@ -887,4 +912,5 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
     }
       
     @keyframes pulse {to {box-shadow: 0 0 0 45px #81818100}};
+    @keyframes glow {to {text-shadow: 0 0 10px #d4dae0, 0 0 20px #d0e0f1, 0 0 30px #c0ddff}};
 }
