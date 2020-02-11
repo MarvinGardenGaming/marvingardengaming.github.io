@@ -45,9 +45,9 @@ function closeAllNavs() {
 
 /* Open the mobile nav */
 function openFirstMobileNav() {
-  console.log("OPENING MOBILE NAV");
   var thisMobileNav = document.getElementById("firstMobileNav");
   thisMobileNav.style.height = "100vh";
+  thisMobileNav.style.display = "flex";
 
   var thisBoxClose = document.getElementById("firstBoxClose");
   thisBoxClose.style.display = "flex";
@@ -59,8 +59,82 @@ function openFirstMobileNav() {
 function closeFirstMobileNav() {
   var thisMobileNav = document.getElementById("firstMobileNav");
   thisMobileNav.style.height = "0vh";
+  thisMobileNav.style.display = "none";
 
   var thisBoxClose = document.getElementById("firstBoxClose");
+  thisBoxClose.style.display = "none";
+
+  document.ontouchmove = function(e){ return true; }
+}
+
+
+/* Open the mobile nav */
+function openSecondMobileNav() {
+  var thisMobileNav = document.getElementById("secondMobileNav");
+  thisMobileNav.style.height = "100vh";
+  thisMobileNav.style.display = "flex";
+
+  var thisBoxClose = document.getElementById("secondBoxClose");
+  thisBoxClose.style.display = "flex";
+
+  document.ontouchmove = function(e){ e.preventDefault(); }
+}
+
+/* Close the mobile nav */
+function closeSecondMobileNav() {
+  var thisMobileNav = document.getElementById("secondMobileNav");
+  thisMobileNav.style.height = "0vh";
+  thisMobileNav.style.display = "none";
+
+  var thisBoxClose = document.getElementById("secondBoxClose");
+  thisBoxClose.style.display = "none";
+
+  document.ontouchmove = function(e){ return true; }
+}
+
+/* Open the mobile nav */
+function openThirdMobileNav() {
+  var thisMobileNav = document.getElementById("thirdMobileNav");
+  thisMobileNav.style.height = "100vh";
+  thisMobileNav.style.display = "flex";
+
+  var thisBoxClose = document.getElementById("thirdBoxClose");
+  thisBoxClose.style.display = "flex";
+
+  document.ontouchmove = function(e){ e.preventDefault(); }
+}
+
+/* Close the mobile nav */
+function closeThirdMobileNav() {
+  var thisMobileNav = document.getElementById("thirdMobileNav");
+  thisMobileNav.style.height = "0vh";
+  thisMobileNav.style.display = "none";
+
+  var thisBoxClose = document.getElementById("thirdBoxClose");
+  thisBoxClose.style.display = "none";
+
+  document.ontouchmove = function(e){ return true; }
+}
+
+/* Open the mobile nav */
+function openFourthMobileNav() {
+  var thisMobileNav = document.getElementById("fourthMobileNav");
+  thisMobileNav.style.height = "100vh";
+  thisMobileNav.style.display = "flex";
+
+  var thisBoxClose = document.getElementById("fourthBoxClose");
+  thisBoxClose.style.display = "flex";
+
+  document.ontouchmove = function(e){ e.preventDefault(); }
+}
+
+/* Close the mobile nav */
+function closeFourthMobileNav() {
+  var thisMobileNav = document.getElementById("fourthMobileNav");
+  thisMobileNav.style.height = "0vh";
+  thisMobileNav.style.display = "none";
+
+  var thisBoxClose = document.getElementById("fourthBoxClose");
   thisBoxClose.style.display = "none";
 
   document.ontouchmove = function(e){ return true; }
@@ -87,11 +161,8 @@ function closeFirstMobileNav() {
 
 
 
-
-
 /* Simulate scrolling with onwheel event fired from side panel */
 function simScroll(event){
-  console.log("simming scroll");
   // Getting the main grid
   var grid = document.getElementById("mainGrid");
 
@@ -318,3 +389,8 @@ renderParticlesFrame();
 
 
 
+
+// Contact form
+function sendEmail(){
+  console.log("SENDING EMAIL BEEP BOOP");
+};
