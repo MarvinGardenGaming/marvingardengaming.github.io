@@ -30,6 +30,35 @@
         color: maroon !important;
         text-shadow: 2px 2px 4px #acacac !important;
     }
+    .cell0{
+      .nested-column-container{
+        flex-direction: column !important;
+        .nested-row-container{
+          height: 50vh !important;
+          .nested-cell2{
+            display: none !important;
+          }
+        }
+        .right-side-background{
+          width: 100vw !important;
+          height: 50vh !important;
+        }
+      }
+    }
+
+    .esri-view-height-xsmall .esri-ui-corner .esri-component.esri-widget--panel-height-only {
+      max-height: 100px !important;
+      max-width: 80px !important;
+      min-width: 0px !important;
+    }
+
+    .esri-view-height-xsmall .esri-ui-corner .esri-component.esri-widget--panel{
+      display: none !important;
+    }
+
+    .esri-basemap-gallery__item-title {
+      display: none !important;
+    }
     .cell1{
         background: linear-gradient(0deg, rgb(255, 255, 255) ,rgb(231, 237, 240)) !important;
     }
@@ -108,6 +137,26 @@
         transform: rotate(30deg) !important;
     }
 
+    #sharepointIcon{
+        width: 15vw;
+        transform: rotate(-20deg);
+        padding-bottom: 3vh;
+    }
+
+    #esriIcon{
+        width: 30vw;
+        transform: rotate(-5deg);
+        padding-top: 3vh;
+        padding-left: 0;
+        padding-right: 1vw;
+    }
+
+    #dojoIcon{
+        width:15vw;
+        transform: rotate(7deg);
+        padding-bottom: 7vh;
+    }
+
     #xcodeIcon{
         width: 25vw !important;
     }
@@ -149,6 +198,10 @@
     }
     .projectDesc{
         font-size: 4.5vw !important;
+    }
+
+    .loading{
+      padding: 50px 25px !important;
     }
 
     
@@ -255,6 +308,26 @@
         width: 33vw !important;
         padding-bottom: 2vh !important;
         transform: rotate(30deg) !important;
+    }
+
+    #sharepointIcon{
+        width: 20vw;
+        transform: rotate(-20deg);
+        padding-bottom: 3vh;
+    }
+
+    #esriIcon{
+        width: 30vw;
+        transform: rotate(-5deg);
+        padding-top: 3vh;
+        padding-left: 0;
+        padding-right: 1vw;
+    }
+
+    #dojoIcon{
+        width:20vw;
+        transform: rotate(7deg);
+        padding-bottom: 7vh;
     }
 
     #xcodeIcon{
@@ -662,6 +735,35 @@ body {
             scroll-snap-align: start;
             font-family: 'Roboto Condensed', sans-serif;
         }
+
+        .cell0{
+          background: linear-gradient(0deg, rgb(45, 46, 46) ,rgb(83, 86, 87));
+            grid-area: ab;
+            position: relative;
+            .nested-column-container{
+              width: 100vw;
+              height: 100vh;
+              display: flex;
+              flex-direction: row;
+
+              .right-side-background{
+                  width: 50%;
+                  display: flex;
+                  position: relative;
+                  justify-content: center;
+              }
+
+              .nested-row-container{
+                  display: flex;
+                  flex-direction: column;
+                  width: 50%;
+                  .projectName{
+                    margin-top: 0;
+                    margin-bottom: 0;
+                  }
+              }
+          }
+        }
         // Introduction Cell
         .cell1{
             
@@ -840,6 +942,7 @@ body {
 
         grid-template-areas: 
             "a"
+            "ab"
             "b"
             "c"
             "d"
@@ -930,6 +1033,26 @@ body {
 
                 #asepriteIcon{
                     width:15vw;
+                    transform: rotate(7deg);
+                    padding-bottom: 7vh;
+                }
+
+                #sharepointIcon{
+                    width: 8vw;
+                    transform: rotate(-20deg);
+                    padding-bottom: 3vh;
+                }
+
+                #esriIcon{
+                    width: 15vw;
+                    transform: rotate(-5deg);
+                    padding-top: 3vh;
+                    padding-left: 0;
+                    padding-right: 1vw;
+                }
+
+                #dojoIcon{
+                    width:8vw;
                     transform: rotate(7deg);
                     padding-bottom: 7vh;
                 }
@@ -1236,7 +1359,7 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
 .expand-button-container{
     display: flex;
     align-self: center;
-    margin-bottom: 5vh;
+    margin-bottom: 8vh;
     .pulse-button {
         position: relative;
         align-items: center;
@@ -1697,6 +1820,32 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
   }
 
 
+//ESRI MAP
+
+#viewDiv {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.esri-view-height-greater-than-medium .esri-ui-corner .esri-component.esri-widget--panel-height-only {
+  max-height: 25vh !important;
+}
+
+
+.loading{
+  position: absolute;
+  display: flex;
+  align-self: center;
+  background-color: rgba(104, 104, 104, 0.507);
+  color: white;
+  font-size: 3rem;
+  padding: 50px 100px;
+  border: solid #ffffff8c;
+  border-width: 10px;
+  border-radius: 10px;
+}
 
 // Contact form
 ::-webkit-input-placeholder{color: #777;}
@@ -1806,8 +1955,63 @@ $asteroids-belt-orb : 300px; $asteroids-belt-pl: 210px;
   }
 }
 
-
+// Social
 #social-bar{
     align-self: center;
     padding-top: 20vh;
+}
+.socialIcons{
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+
+$black: #e1e7ec54;
+$blue: #3498DB;
+$lightgray: lightgray;
+
+.navigation {
+  border-radius: 20px;
+  padding: 30px;
+  &_item {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    background: $black;
+    margin-right: 5px;
+    outline: none;
+    position: relative;
+    transition: all .4s cubic-bezier(0.82, -0.12, 0.24, 0.56);
+    overflow: hidden;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &:hover {
+    .navigation_item {
+      transform: scale(.9);
+      margin-right: -10px;
+      border-radius: 0;
+      &:last-child {
+        margin-right: 0;
+        border-radius: 0 20px 20px 0;
+      }
+      &:first-child {
+        border-radius: 20px 0 0 20px;
+      }
+      &:hover {
+        background: $blue;
+        transform: scale(1.2);
+        border-radius: 20px;
+        z-index: 20;
+      }
+    }
+  }
 }

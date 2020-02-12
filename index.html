@@ -12,6 +12,8 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="Index.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700i&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
+        <script src="https://js.arcgis.com/4.13/"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -320,6 +322,39 @@
                     
                 </canvas>
             </div>
+
+            <div id="WorkCell" class="cells cell0">
+                <div class="nested-column-container">
+                    <div class="nested-row-container">
+                        <div class="nested-cells nested-cell1">
+                            <p class="projectName">ESRI ArcGIS Javascript Geospatial Map</p>
+                            <p class="projectDesc">
+                            ESRI's ArcGIS Javascript Geospatial Maps are what I<br>
+                            work on in my day to day professional work. I have done<br>
+                            highly customized mapping applications for goverment<br>
+                            entities like NASA, US Navy, and the US Army Corps of<br>
+                            Engineers. Due to the sensitive nature of my work I am<br>
+                            unable to show you the maps I've created for these orgs.<br>
+                            But I have embed a sample map to give you an idea of what<br>
+                            I work on.
+                            </p>
+                        </div>
+                        <div class="nested-cells nested-cell2">
+                            <p id="techUsed" class="projectName">Technologies Used</p>
+                            <div class="iconsContainer">
+                                <img class="techIcons" id="sharepointIcon" src=/Images/sharepoint.png alt="Sharepoint">
+                                <img class="techIcons" id="esriIcon" src=/Images/esri.png alt="ESRI">
+                                <img class="techIcons" id="dojoIcon" src=/Images/dojo.png alt="Dojo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-side-background">
+                        <div id="viewDiv"></div>
+                        <div id="loadingDiv" class="loading">Updating...</div>
+                    </div>
+                </div>
+            </div>
+
             <div id="SNHCell" onclick="openFirstNav()" class="cells cell2">
                 <div class="nested-column-container">
                     <div onmouseover="openFirstNav()" class="left-side-background">
@@ -520,7 +555,7 @@
 
                     <h2>Contact me</h2>
                   
-                    <form id="contact" action="" method="post">
+                    <form id="contact">
                       <div class="left">
                         <input id="nameField" type="text" placeholder="Name" required="required"/>
                         <input id="emailField" type="email" placeholder="Email" required="required"/>
@@ -535,7 +570,20 @@
                     </form>
 
                     <div id="social-bar">
-                        Contact Me Here
+                        <div class="navigation">
+                            <a href="https://www.facebook.com/zac.marvin" class="navigation_item">
+                                <img class="socialIcons" id="fbIcon" src="/Images/fb.png" alt="Facebook Icon">
+                            </a>
+                            <a href="https://www.instagram.com/fratzac94/" class="navigation_item">
+                                <img class="socialIcons" id="instaIcon" src="/Images/instagram.png" alt="Instagram Icon">
+                            </a>
+                            <a href="https://twitter.com/FratZacVR" class="navigation_item">
+                                <img class="socialIcons" id="twitterIcon" src="/Images/twitter.png" alt="Twitter Icon">
+                            </a>
+                            <a href="https://www.linkedin.com/in/zacharymarvin/" class="navigation_item">
+                                <img class="socialIcons" id="linkedinIcon" src="/Images/linkedin.png" alt="LinkedIn Icon">
+                            </a>
+                          </div>
                     </div>
                   
                   </div>
@@ -543,4 +591,5 @@
         </div>
     </body>
     <script src="Index.js"></script>
+    <script src="ESRI.js"></script>
 </html>
