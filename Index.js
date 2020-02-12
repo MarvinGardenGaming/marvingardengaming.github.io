@@ -392,5 +392,16 @@ renderParticlesFrame();
 
 // Contact form
 function sendEmail(){
-  console.log("SENDING EMAIL BEEP BOOP");
+  var name = document.getElementById("nameField").value;
+  var email = document.getElementById("emailField").value;
+  var subject = document.getElementById("subjectField").value;
+  var message = document.getElementById("messageField").value;
+
+  if(name != "" && email != "" && subject != "" && message != ""){
+    var url = 'mailto:zachary.marvin@live.com?subject=' + name + ' (' + email + ')' + ' ' + subject + '&body=' + message;
+    window.location.href = url;
+  } else {
+    console.log("SOMETHING WAS EMPTY");
+  }
+
 };
