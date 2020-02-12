@@ -350,9 +350,17 @@
 }
 
 // iPhone 5/SE and smaller
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 350px) {
     .Intro{
         font-size: 8px !important;
+    }
+
+    #contact textarea{
+      min-height: 60px !important;
+    }
+    
+    #social-bar{
+        padding-top: 5vh !important;
     }
 
     #myName{
