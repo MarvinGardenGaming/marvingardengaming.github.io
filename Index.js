@@ -398,6 +398,8 @@ function sendEmail(){
   var message = document.getElementById("messageField").value;
 
   if(name != "" && email != "" && subject != "" && message != ""){
+    location.hash = "";
+    window.location.hash = "";
     var url = 'mailto:zachary.marvin@live.com?subject=' + name + ' (' + email + ')' + ' ' + subject + '&body=' + message;
     window.open(url);
   } else {
