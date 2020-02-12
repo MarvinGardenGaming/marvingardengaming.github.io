@@ -180,6 +180,10 @@
         }
     }
 
+    .expand-button-container{
+      margin-bottom: 8vh;
+    }
+
     #firstBoxClose{
         width: 18px !important;
         height: 0 !important;
@@ -486,7 +490,7 @@ body {
         display: flex;
         flex-direction: column;
         color: rgb(238, 243, 246);
-        background-color: #111;
+        background: linear-gradient(0deg, rgb(45, 46, 46) ,rgb(83, 86, 87));
         .expanded-container{
             display: flex;
             width: 100vw;

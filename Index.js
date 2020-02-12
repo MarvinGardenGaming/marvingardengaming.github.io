@@ -399,7 +399,7 @@ function sendEmail(){
 
   if(name != "" && email != "" && subject != "" && message != ""){
     var url = 'mailto:zachary.marvin@live.com?subject=' + name + ' (' + email + ')' + ' ' + subject + '&body=' + message;
-    window.location.href = url;
+    window.open(url);
   } else {
     console.log("SOMETHING WAS EMPTY");
   }
