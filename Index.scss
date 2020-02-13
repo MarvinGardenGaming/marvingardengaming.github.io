@@ -30,6 +30,11 @@
         color: maroon !important;
         text-shadow: 2px 2px 4px #acacac !important;
     }
+
+    .grid-container{
+      scroll-snap-type: none !important;
+      scroll-snap-type: y none !important;
+    }
     .cell0{
       .nested-column-container{
         flex-direction: column !important;
